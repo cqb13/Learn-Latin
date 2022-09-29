@@ -1,0 +1,8 @@
+{
+  "short_name": "Latin Declensions",
+  "name": "Learn Latin Declensions",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
