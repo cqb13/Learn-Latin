@@ -1,0 +1,78 @@
+body {
+  background: #f5f7fa;
+  color: #444;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.Header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.Content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#Chart {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#Chart td, #Chart th {
+  border: 1px solid #444;
+  padding: 8px;
+}
+
+#Chart tr:nth-child(even){background-color: #f2f2f2;}
+
+#Chart tr:hover {background-color: #ddd;}
+
+#Chart th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #496bbe;
+  color: white;
+}
+
+.Button {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #496bbe;
+  width: 20%;
+}
+
+.Button:hover {
+  background-color: rgba(73, 107, 190, 0.7);
+  transition: 500ms;
+}
+
+.Button:active {
+  scale: 1.2;
+  transition: 500ms;
+}
+
+.Wrong {
+  border: 2px solid red;
+}
+
+.Right {
+  border: 2px solid springgreen;
+}
+
+.Normal {
+  border: 2px solid #444;
+}
