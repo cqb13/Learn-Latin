@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import data from './data/charts.json';
 import './css/App.css';
 
 function clearValues() {
@@ -28,20 +29,14 @@ function App() {
       </header>
       <h2>Declension Chart {chartCount}/3</h2>
       <div className='Content'>
+      <button className='Switch-Chart' onClick={() => {if (count == 1) {setChartCount(3);} else {setChartCount(count -= 1);}clearValues();}}>&#11144;</button>
         <Chart count={chartCount}/>
+      <button className='Switch-Chart' onClick={() => {if (count == 3) {setChartCount(1);} else {setChartCount(count += 1);}clearValues();}}>&#10162;</button>
       </div>
-      <h2 className='Button' onClick={() => {
-        if (count == 3) {
-          setChartCount(1);
-        } else {
-          setChartCount(count += 1);
-        }
-        clearValues();
-      }}>Next Chart</h2>
-      <h2 className='Button' onClick={() => {
-        setChartCount(1);
-        clearValues();
-      }}>Start Again</h2>
+      <div className="Options">
+      <button className='Chart-Option' onClick={() => clearValues()}>Redo</button>
+      <button className='Chart-Option'>Answers</button>
+      </div>
     </div>
   );
 }
@@ -54,64 +49,30 @@ function Chart(count) {
   const handleChange = event => {
     var id = event.target.id;
     var value = event.target.value;
-    if (count.count == 1) {
-      if (id == "s-1" && value == "a" || id == "s-5" && value == "a") {
-        event.target.className = "Right";
-      }else if (id == "s-2" && value == 'ae' || id == "s-3" && value == 'ae' || id == "p-1" && value == "ae") {
-        event.target.className = "Right";
-      }else if (id == "s-4" && value == "am") {
-        event.target.className = "Right";
-      } else if (id == "p-2" && value == "arum") {
-        event.target.className = "Right";
-      } else if (id == "p-3" && value == 'is' || id == "p-5" && value == "is") {
-        event.target.className = "Right";
-      } else if (id == "p-4" && value == "as") {
-        event.target.className = "Right";
-      } else {
-        event.target.className = "Wrong";
-      }
-    } else if (count.count == 2) {
-      if (id == 's-1' && value == 'us') {
-        event.target.className = "Right";
-      } else if (id == 's-2' && value == 'i' || id == 'p-1' && value == 'i') {
-        event.target.className = "Right";
-      } else if (id == 's-3' && value == 'o' || id == 's-5' && value == 'o') {
-        event.target.className = "Right";
-      } else if (id == 's-4' && value == 'um') {
-        event.target.className = "Right";
-      } else if (id == 'p-2' && value == 'orum') {
-        event.target.className = "Right";
-      } else if (id == 'p-3' && value == 'is' || id == 'p-5' && value == 'is') {
-        event.target.className = "Right";
-      } else if (id == 'p-4' && value == 'os') {
-        event.target.className = "Right";
-      } else {
-        event.target.className = "Wrong";
-      }
-    } else if (count.count == 3) {
-      if (id == 's-1' && value == 'r, x, s, o, n, l') {
-        event.target.className = "Right";
-      } else if (id == 's-2' && value == 'is') {
-        event.target.className = "Right";
-      } else if (id == 's-3' && value == 'i') {
-        event.target.className = "Right";
-      } else if (id == 's-4' && value == 'em') {
-        event.target.className = "Right";
-      } else if (id == 's-5' && value == 'e') {
-        event.target.className = "Right";
-      } else if (id == 'p-1' && value == 'es' || id == 'p-4' && value == 'es') {
-        event.target.className = "Right";
-      } else if (id == 'p-2' && value == 'um') {
-        event.target.className = "Right";
-      } else if (id == 'p-3' && value == 'ibus' || id == 'p-5' && value == 'ibus') {
-        event.target.className = "Right";
-      } else {
-        event.target.className = "Wrong";
-      }
-    }
-
     if (value == "") {
       event.target.className = "Normal";
+    } else if (id == "s-1" && value == data['d-'+ count.count +''].Nominative[0]){
+      event.target.className = "Right";
+    } else if (id == "s-2" && value == data['d-'+ count.count +''].Genative[0]) {
+      event.target.className = "Right";
+    } else if (id == "s-3" && value == data['d-'+ count.count +''].Dative[0]) {
+      event.target.className = "Right";
+    } else if (id == "s-4" && value == data['d-'+ count.count +''].Accusative[0]) {
+      event.target.className = "Right";
+    } else if (id == "s-5" && value == data['d-'+ count.count +''].Ablative[0]) {
+      event.target.className = "Right";
+    } else if (id == "p-1" && value == data['d-'+ count.count +''].Nominative[1]){
+      event.target.className = "Right";
+    } else if (id == "p-2" && value == data['d-'+ count.count +''].Genative[1]) {
+      event.target.className = "Right";
+    } else if (id == "p-3" && value == data['d-'+ count.count +''].Dative[1]) {
+      event.target.className = "Right";
+    } else if (id == "p-4" && value == data['d-'+ count.count +''].Accusative[1]) {
+      event.target.className = "Right";
+    } else if (id == "p-5" && value == data['d-'+ count.count +''].Ablative[1]) {
+      event.target.className = "Right";
+    } else {
+      event.target.className = "Wrong";
     }
   };
 

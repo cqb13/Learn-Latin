@@ -20,6 +20,20 @@ h2 {
   justify-content: center;
 }
 
+button {
+  border: 2px solid #496bbe;
+  background-color: #f5f7fa;
+  transition: 500ms;
+}
+
+button:hover {
+  background-color: rgba(73, 107, 190, 0.7);
+}
+
+button:active {
+  scale: 1.2;
+}
+
 .Content {
   display: flex;
   align-content: center;
@@ -27,42 +41,29 @@ h2 {
 }
 
 #Chart {
-  border-collapse: collapse;
   width: 50%;
 }
 
-#Chart td, #Chart th {
+#Chart td,
+#Chart th {
   border: 1px solid #444;
   padding: 8px;
+  text-align: center;
 }
 
-#Chart tr:nth-child(even){background-color: #f2f2f2;}
+#Chart tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#Chart tr:hover {background-color: #ddd;}
+#Chart tr:hover {
+  background-color: #ddd;
+}
 
 #Chart th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #496bbe;
   color: white;
-}
-
-.Button {
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #496bbe;
-  width: 20%;
-}
-
-.Button:hover {
-  background-color: rgba(73, 107, 190, 0.7);
-  transition: 500ms;
-}
-
-.Button:active {
-  scale: 1.2;
-  transition: 500ms;
 }
 
 .Wrong {
@@ -75,4 +76,22 @@ h2 {
 
 .Normal {
   border: 2px solid #444;
+}
+
+.Switch-Chart {
+  margin: 10px;
+  font-size: 50px;
+}
+
+.Options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Chart-Option {
+  margin: 10px;
+  width: 40%;
+  font-size: 25px;
 }

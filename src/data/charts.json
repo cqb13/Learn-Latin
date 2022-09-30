@@ -1,0 +1,23 @@
+{
+  "d-1": {
+    "Nominative": ["a", "ae"],
+    "Genative": ["ae", "arum"],
+    "Dative": ["ae", "is"],
+    "Accusative": ["am", "as"],
+    "Ablative": ["a", "is"]
+  },
+  "d-2": {
+    "Nominative": ["us", "i"],
+    "Genative": ["i", "orum"],
+    "Dative": ["o", "is"],
+    "Accusative": ["um", "os"],
+    "Ablative": ["o", "is"]
+  },
+  "d-3": {
+    "Nominative": ["r, x, s, o, n, l", "es"],
+    "Genative": ["is", "um"],
+    "Dative": ["i", "ibus"],
+    "Accusative": ["em", "es"],
+    "Ablative": ["e", "ibus"]
+  }
+}
