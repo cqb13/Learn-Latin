@@ -2,6 +2,11 @@
   "short_name": "Latin Declensions",
   "name": "Learn Latin Declensions",
   "icons": [
+    {
+      "src": "Logo.png",
+      "type": "image/png",
+      "sizes": "2408x2408"
+    }
   ],
   "start_url": ".",
   "display": "standalone"
