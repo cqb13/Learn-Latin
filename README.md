@@ -1,6 +1,6 @@
 <div align="center">
   <!-- Logo and Title -->
-  <img src="./src/images/Logo.png" alt="logo" width="20%"/>
+  <img src="https://raw.githubusercontent.com/cqb13/Learn-Latin-Declensions/master/public/Logo.png" alt="logo" width="20%"/>
   <h1>Learn Latin Declensions</a></h1>
   <p>A simple website to practice and learn Latin declension endings</p>
 
