@@ -4,12 +4,18 @@ import Row from './ChartRow';
 import './css/App.css';
 
 const App = () => {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 650px)").matches
+  )
   const [chartCount, setChartCount] = useState();
   const chartAmount = data['chart-count'];
   var count = chartCount;
 
   useEffect(() => {
     setChartCount(1);
+    window
+    .matchMedia("(max-width: 650px)")
+    .addEventListener('change', e => setMatches( e.matches ));
   }, []);
 
   const clearValues = () => {
@@ -24,14 +30,14 @@ const App = () => {
   }
 
   const swtichChart = (count, move) => {
-    if (move == "right") {
+    if (move === "right") {
       setChartCount(count += 1);
-      if (chartCount == chartAmount) {
+      if (chartCount === chartAmount) {
         setChartCount(1);
       }
-    } else if (move == "left"){
+    } else if (move === "left"){
       setChartCount(count -= 1);
-      if (chartCount == 1) {
+      if (chartCount === 1) {
         setChartCount(3);
       }
     }
@@ -48,15 +54,15 @@ const App = () => {
       <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>&#11144;</button>
       <table className="Chart">
       <tr>
-        <th>Form</th>
+        <th className="Side-Label">Form</th>
         <th>Singular</th>
         <th>Plural</th>
       </tr>
-      <Row count={chartCount} name={"Nominative"} row={1}/>
-      <Row count={chartCount} name={"Genative"} row={2}/>
-      <Row count={chartCount} name={"Dative"} row={3}/>
-      <Row count={chartCount} name={"Accusative"} row={4}/>
-      <Row count={chartCount} name={"Ablative"} row={5}/>
+      <Row count={chartCount} name={"Nominative"} row={1} small={matches}/>
+      <Row count={chartCount} name={"Genative"} row={2} small={matches}/>
+      <Row count={chartCount} name={"Dative"} row={3} small={matches}/>
+      <Row count={chartCount} name={"Accusative"} row={4} small={matches}/>
+      <Row count={chartCount} name={"Ablative"} row={5} small={matches}/>
       </table>
       <button className='Switch-Chart' onClick={() => swtichChart(count, "right")}>&#10162;</button>
       </div>

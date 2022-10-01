@@ -108,7 +108,7 @@ input[type="text"] {
 }
 
 /* Phones*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   h1 {
     font-size: 30px;
   }
@@ -118,6 +118,9 @@ input[type="text"] {
   .Chart {
     margin-left: auto;
     margin-right: auto;
+  }
+  .Side-Label {
+    display: none;
   }
   .Options {
     flex-direction: row;
