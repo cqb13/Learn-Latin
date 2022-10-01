@@ -15,7 +15,7 @@
     "Ablative": ["o", "is"]
   },
   "d-3": {
-    "Nominative": ["r, x, s, o, n, l", "es"],
+    "Nominative": [["r", "x", "s", "o", "n", "l"], "es"],
     "Genative": ["is", "um"],
     "Dative": ["i", "ibus"],
     "Accusative": ["em", "es"],

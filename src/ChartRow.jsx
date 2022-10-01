@@ -3,7 +3,7 @@ import data from './data/charts.json';
 const Row = (info) => {
   var detail = "Enter";
 
-  if (info.small == true) {
+  if (info.small === true) {
     detail = info.name;
   }
 
@@ -11,13 +11,24 @@ const Row = (info) => {
     event.target.className = name;
   }
 
+  // For declensions with more than 1 possible ending
+  const specialCheck = (event, value, chart) => {
+    if (chart.every((item) => value.includes(item))) {
+      answerState(event, "Right");
+    } else {
+      answerState(event, "Wrong");
+    }
+  }
+
   const handleChange = event => {
     var id = event.target.id;
-    var value = event.target.value;
+    var value = (event.target.value).toLowerCase();
     var chart = data['d-'+ info.count +''];
     // checks that the right value is entered in the right spot on the chart
     if (value === "") {
       answerState(event, "Normal");
+    } else if (id === "s-1" && info.count === 3) {
+      specialCheck(event, value, chart.Nominative[0]);
     } else if (id === "s-1" && value === chart.Nominative[0]){
       answerState(event, "Right");
     } else if (id === "s-2" && value === chart.Genative[0]) {

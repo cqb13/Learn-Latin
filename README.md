@@ -17,7 +17,9 @@ Declension charts 1-3!
 <h2>TODO:</h2>
 <pre>
 - Fix style on mobile devices
+  - arrows change on different OS
 - Answer key for the declension chart
 - Add the rest of the declension charts
 - Fix a lot of bad code
+  - d-3 s-1 needs special check
 </pre>

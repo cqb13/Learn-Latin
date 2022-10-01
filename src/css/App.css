@@ -107,22 +107,35 @@ input[type="text"] {
   font-size: 25px;
 }
 
-/* Phones*/
+/*Phones*/
+@media only screen and (max-width: 450px) {
+  .Content {
+    scale: 0.9;
+    transition: 500ms;
+  }
+}
+
+/*Smaller screens*/
 @media only screen and (max-width: 650px) {
   h1 {
     font-size: 30px;
+    transition: 500ms;
   }
   .Content {
     flex-direction: column;
+    transition: 500ms;
   }
   .Chart {
     margin-left: auto;
     margin-right: auto;
+    transition: 500ms;
   }
   .Side-Label {
     display: none;
+    transition: 500ms;
   }
   .Options {
     flex-direction: row;
+    transition: 500ms;
   }
 }
