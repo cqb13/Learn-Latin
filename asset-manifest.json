@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Learn-Latin-Declensions/static/css/main.e7a3ffa1.css",
-    "main.js": "/Learn-Latin-Declensions/static/js/main.2ee09614.js",
+    "main.css": "/Learn-Latin-Declensions/static/css/main.c020b900.css",
+    "main.js": "/Learn-Latin-Declensions/static/js/main.c7ffbd3b.js",
     "index.html": "/Learn-Latin-Declensions/index.html",
-    "main.e7a3ffa1.css.map": "/Learn-Latin-Declensions/static/css/main.e7a3ffa1.css.map",
-    "main.2ee09614.js.map": "/Learn-Latin-Declensions/static/js/main.2ee09614.js.map"
+    "main.c020b900.css.map": "/Learn-Latin-Declensions/static/css/main.c020b900.css.map",
+    "main.c7ffbd3b.js.map": "/Learn-Latin-Declensions/static/js/main.c7ffbd3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7a3ffa1.css",
-    "static/js/main.2ee09614.js"
+    "static/css/main.c020b900.css",
+    "static/js/main.c7ffbd3b.js"
   ]
 }
