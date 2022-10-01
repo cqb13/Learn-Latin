@@ -9,27 +9,29 @@ const Row = (info) => {
     const handleChange = event => {
       var id = event.target.id;
       var value = event.target.value;
+      var chart = data['d-'+ info.count +''];
+      // checks that the right value is entered in the right spot on the chart
       if (value === "") {
         answerState(event, "Normal");
-      } else if (id === "s-1" && value === data['d-'+ info.count +''].Nominative[0]){
+      } else if (id === "s-1" && value === chart.Nominative[0]){
         answerState(event, "Right");
-      } else if (id === "s-2" && value === data['d-'+ info.count +''].Genative[0]) {
+      } else if (id === "s-2" && value === chart.Genative[0]) {
         answerState(event, "Right");
-      } else if (id === "s-3" && value === data['d-'+ info.count +''].Dative[0]) {
+      } else if (id === "s-3" && value === chart.Dative[0]) {
         answerState(event, "Right");
-      } else if (id === "s-4" && value === data['d-'+ info.count +''].Accusative[0]) {
+      } else if (id === "s-4" && value === chart.Accusative[0]) {
         answerState(event, "Right");
-      } else if (id === "s-5" && value === data['d-'+ info.count +''].Ablative[0]) {
+      } else if (id === "s-5" && value === chart.Ablative[0]) {
         answerState(event, "Right");
-      } else if (id === "p-1" && value === data['d-'+ info.count +''].Nominative[1]){
+      } else if (id === "p-1" && value === chart.Nominative[1]){
         answerState(event, "Right");
-      } else if (id === "p-2" && value === data['d-'+ info.count +''].Genative[1]) {
+      } else if (id === "p-2" && value === chart.Genative[1]) {
         answerState(event, "Right");
-      } else if (id === "p-3" && value === data['d-'+ info.count +''].Dative[1]) {
+      } else if (id === "p-3" && value === chart.Dative[1]) {
         answerState(event, "Right");
-      } else if (id === "p-4" && value === data['d-'+ info.count +''].Accusative[1]) {
+      } else if (id === "p-4" && value === chart.Accusative[1]) {
         answerState(event, "Right");
-      } else if (id === "p-5" && value === data['d-'+ info.count +''].Ablative[1]) {
+      } else if (id === "p-5" && value === chart.Ablative[1]) {
         answerState(event, "Right");
       } else {
         answerState(event, "Wrong");

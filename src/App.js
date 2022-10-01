@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import data from './data/charts.json';
 import Row from './ChartRow';
 import './css/App.css';
 
 const App = () => {
   const [chartCount, setChartCount] = useState();
-  var count = chartCount
+  const chartAmount = data['chart-count'];
+  var count = chartCount;
 
   useEffect(() => {
     setChartCount(1);
@@ -21,15 +23,30 @@ const App = () => {
     }
   }
 
+  const swtichChart = (count, move) => {
+    if (move == "right") {
+      setChartCount(count += 1);
+      if (chartCount == chartAmount) {
+        setChartCount(1);
+      }
+    } else if (move == "left"){
+      setChartCount(count -= 1);
+      if (chartCount == 1) {
+        setChartCount(3);
+      }
+    }
+    clearValues();
+  }
+
   return (
     <div className="App">
       <header className="Header">
         <h1>Learn Latin Declensions</h1>
       </header>
-      <h2>Declension Chart {chartCount}/3</h2>
+      <h2>Declension Chart {chartCount}/{chartAmount}</h2>
       <div className='Content'>
-      <button className='Switch-Chart' onClick={() => {if (count === 1) {setChartCount(3);} else {setChartCount(count -= 1);}clearValues();}}>&#11144;</button>
-      <table id="Chart">
+      <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>&#11144;</button>
+      <table className="Chart">
       <tr>
         <th>Form</th>
         <th>Singular</th>
@@ -41,7 +58,7 @@ const App = () => {
       <Row count={chartCount} name={"Accusative"} row={4}/>
       <Row count={chartCount} name={"Ablative"} row={5}/>
       </table>
-      <button className='Switch-Chart' onClick={() => {if (count === 3) {setChartCount(1);} else {setChartCount(count += 1);}clearValues();}}>&#10162;</button>
+      <button className='Switch-Chart' onClick={() => swtichChart(count, "right")}>&#10162;</button>
       </div>
       <div className="Options">
       <button className='Chart-Option' onClick={() => clearValues()}>Redo</button>

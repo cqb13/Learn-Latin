@@ -4,7 +4,8 @@
   <h1>Learn Latin Declensions</a></h1>
   <p>A simple website to practice and learn Latin declension endings</p>
 
-  [Start learning now!](https://cqb13.github.io/Learn-Latin-Declensions/)
+[Start learning now!](https://cqb13.github.io/Learn-Latin-Declensions/)
+
 </div>
 
 <hr />
