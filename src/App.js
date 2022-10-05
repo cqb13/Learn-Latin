@@ -1,22 +1,15 @@
 import { useState, useEffect } from "react";
 import data from './data/charts.json';
+import AnswerRow from './AnswerChart';
 import Row from './ChartRow';
 import './css/App.css';
 
 const App = () => {
-  const [matches, setMatches] = useState(
-    window.matchMedia("(max-width: 650px)").matches
-  )
-  const [chartCount, setChartCount] = useState();
+  const [chartCount, setChartCount] = useState(1);
+  const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
+  const [visibleAnswers, setVisibleAnswers] = useState(false);
   const chartAmount = data['chart-count'];
   var count = chartCount;
-
-  useEffect(() => {
-    setChartCount(1);
-    window
-    .matchMedia("(max-width: 650px)")
-    .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
 
   const clearValues = () => {
     var loop = 1;
@@ -44,31 +37,46 @@ const App = () => {
     clearValues();
   }
 
+  const handleClick = () => {
+    if (answerBtnName == "Hide Answers") {
+      setAnswerBtnName("Show Answers");
+      setVisibleAnswers(false);
+    } else {
+      setAnswerBtnName("Hide Answers");
+      setVisibleAnswers(true);
+    }
+  }
+
   return (
     <div className="App">
       <header className="Header">
-        <h1>Learn Latin Declensions</h1>
+      <h1>Learn Latin Declensions</h1>
       </header>
       <h2>Declension Chart {chartCount}/{chartAmount}</h2>
       <div className='Content'>
-      <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>&#11144;</button>
+      <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>{'<'}</button>
       <table className="Chart">
       <tr>
-        <th className="Side-Label">Form</th>
-        <th>Singular</th>
-        <th>Plural</th>
+      <th className="Side-Label">Form</th>
+      <th>Singular</th>
+      <th>Plural</th>
       </tr>
-      <Row count={chartCount} name={"Nominative"} row={1} small={matches}/>
-      <Row count={chartCount} name={"Genative"} row={2} small={matches}/>
-      <Row count={chartCount} name={"Dative"} row={3} small={matches}/>
-      <Row count={chartCount} name={"Accusative"} row={4} small={matches}/>
-      <Row count={chartCount} name={"Ablative"} row={5} small={matches}/>
+      <Row count={chartCount} row={1} answers={visibleAnswers}/>
+      <Row count={chartCount} row={2} answers={visibleAnswers}/>
+      <Row count={chartCount} row={3} answers={visibleAnswers}/>
+      <Row count={chartCount} row={4} answers={visibleAnswers}/>
+      <Row count={chartCount} row={5} answers={visibleAnswers}/>
+      <AnswerRow count={chartCount} row={1} answers={visibleAnswers}/>
+      <AnswerRow count={chartCount} row={2} answers={visibleAnswers}/>
+      <AnswerRow count={chartCount} row={3} answers={visibleAnswers}/>
+      <AnswerRow count={chartCount} row={4} answers={visibleAnswers}/>
+      <AnswerRow count={chartCount} row={5} answers={visibleAnswers}/>
       </table>
-      <button className='Switch-Chart' onClick={() => swtichChart(count, "right")}>&#10162;</button>
+      <button className='Switch-Chart' onClick={() => swtichChart(count, "right")}>{'>'}</button>
       </div>
       <div className="Options">
-      <button className='Chart-Option' onClick={() => clearValues()}>Redo</button>
-      <button className='Chart-Option'>Answers</button>
+      <button className='Chart-Option' onClick={() => clearValues()}>Clear Answers</button>
+      <button className='Chart-Option' onClick={() => handleClick()}>{answerBtnName}</button>
       </div>
     </div>
   );

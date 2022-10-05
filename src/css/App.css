@@ -33,7 +33,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(73, 107, 190, 0.7);
+  background-color: #496bbeb3;
 }
 
 button:active {
@@ -73,8 +73,10 @@ button:active {
   color: white;
 }
 
-input[type="text"] {
+input[type="entry"] {
   font-family: inherit;
+  text-align: center;
+  width: 60%;
 }
 
 .Wrong {
@@ -89,9 +91,14 @@ input[type="text"] {
   border: 2px solid #444;
 }
 
+.Hidden {
+  display: none;
+}
+
 .Switch-Chart {
   margin: 10px;
   font-size: 50px;
+  color: #444;
 }
 
 .Options {
@@ -128,10 +135,6 @@ input[type="text"] {
   .Chart {
     margin-left: auto;
     margin-right: auto;
-    transition: 500ms;
-  }
-  .Side-Label {
-    display: none;
     transition: 500ms;
   }
   .Options {

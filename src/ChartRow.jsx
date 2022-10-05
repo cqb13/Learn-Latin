@@ -1,10 +1,12 @@
 import data from './data/charts.json';
 
 const Row = (info) => {
-  var detail = "Enter";
+  var name = data['name-map']['name-'+ info.row]
+  var chart = data['d-'+ info.count +''];
+  var cName = '';
 
-  if (info.small === true) {
-    detail = info.name;
+  if (info.answers === true) {
+    cName = 'Hidden'
   }
 
   const answerState = (event, name) => {
@@ -20,11 +22,10 @@ const Row = (info) => {
     }
   }
 
+  // checks that the right value is entered in the right spot on the chart
   const handleChange = event => {
-    var id = event.target.id;
-    var value = (event.target.value).toLowerCase();
-    var chart = data['d-'+ info.count +''];
-    // checks that the right value is entered in the right spot on the chart
+    let value = (event.target.value).toLowerCase();
+    let id = event.target.id;
     if (value === "") {
       answerState(event, "Normal");
     } else if (id === "s-1" && info.count === 3) {
@@ -55,15 +56,15 @@ const Row = (info) => {
   };
 
   return (
-    <tr>
-    <td className='Side-Label'>{info.name}</td>
-    <td>
-      <input type="text" placeholder={detail + ' Declension'} id={'s-' + info.row} onChange={handleChange} className="Normal"/>
-    </td>
-        <td>
-      <input type="text" placeholder={detail + ' Declension'} id={'p-' + info.row} onChange={handleChange} className="Normal"/>
-    </td>
-  </tr>
+    <tr className={cName}>
+      <td className='Side-Label'>{name}</td>
+      <td>
+      <input type="entry" placeholder='Enter Declension' id={'s-' + info.row} onChange={handleChange} className="Normal"/>
+      </td>
+      <td>
+      <input type="entry" placeholder='Enter Declension' id={'p-' + info.row} onChange={handleChange} className="Normal"/>
+      </td>
+    </tr>
   )
 }
 

@@ -1,5 +1,12 @@
 {
   "chart-count": 3,
+  "name-map": {
+    "name-1": "Nominative",
+    "name-2": "Genative",
+    "name-3": "Dative",
+    "name-4": "Accusative",
+    "name-5": "Ablative"
+  },
   "d-1": {
     "Nominative": ["a", "ae"],
     "Genative": ["ae", "arum"],
