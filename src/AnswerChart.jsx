@@ -28,15 +28,14 @@ const AnswerRow = (info) => {
     plural = chart.Ablative[1];
   }
 
-
   return (
     <tr className={cName}>
       <td className='Side-Label'>{name}</td>
       <td>
-      <input type="entry" defaultValue={singular} className="Right"/>
+      <input type="entry" value={singular} className="Right" readOnly/>
       </td>
       <td>
-      <input type="entry" defaultValue={plural} className="Right"/>
+      <input type="entry" value={plural} className="Right" readOnly/>
       </td>
     </tr>
   )

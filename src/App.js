@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import data from './data/charts.json';
 import AnswerRow from './AnswerChart';
 import Row from './ChartRow';
@@ -38,7 +38,7 @@ const App = () => {
   }
 
   const handleClick = () => {
-    if (answerBtnName == "Hide Answers") {
+    if (answerBtnName === "Hide Answers") {
       setAnswerBtnName("Show Answers");
       setVisibleAnswers(false);
     } else {

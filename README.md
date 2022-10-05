@@ -12,7 +12,8 @@
 
 <h2>Features:</h2>
 <pre>
-Declension charts 1-3!
+- Declension charts 1-3
+- Declension charts 1-3 answers
 </pre>
 <h2>TODO:</h2>
 <pre>
