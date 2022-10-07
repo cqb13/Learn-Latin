@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/LLD/home/static/css/main.6b930be0.css",
-    "main.js": "/LLD/home/static/js/main.bb1ada9e.js",
-    "index.html": "/LLD/home/index.html",
-    "main.6b930be0.css.map": "/LLD/home/static/css/main.6b930be0.css.map",
-    "main.bb1ada9e.js.map": "/LLD/home/static/js/main.bb1ada9e.js.map"
+    "main.css": "/Learn-Latin-Declensions/static/css/main.6b930be0.css",
+    "main.js": "/Learn-Latin-Declensions/static/js/main.c38d6b7e.js",
+    "index.html": "/Learn-Latin-Declensions/index.html",
+    "main.6b930be0.css.map": "/Learn-Latin-Declensions/static/css/main.6b930be0.css.map",
+    "main.c38d6b7e.js.map": "/Learn-Latin-Declensions/static/js/main.c38d6b7e.js.map"
   },
   "entrypoints": [
     "static/css/main.6b930be0.css",
-    "static/js/main.bb1ada9e.js"
+    "static/js/main.c38d6b7e.js"
   ]
 }
