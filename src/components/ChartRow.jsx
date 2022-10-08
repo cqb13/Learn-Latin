@@ -1,4 +1,4 @@
-import data from './data/charts.json';
+import data from '../data/charts.json';
 
 const Row = (info) => {
   var name = data['name-map']['name-'+ info.row]

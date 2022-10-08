@@ -1,45 +1,3 @@
-body {
-  background: #f5f7fa;
-  color: #444;
-  font-family: "Ubuntu", sans-serif;
-  text-align: center;
-}
-
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
-
-.Header {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-button {
-  border: 2px solid #496bbe;
-  background-color: #f5f7fa;
-  transition: 500ms;
-}
-
-button:hover {
-  background-color: #496bbeb3;
-}
-
-button:active {
-  scale: 1.2;
-}
-
 .Content {
   display: flex;
   align-content: center;
@@ -71,12 +29,6 @@ button:active {
   padding-bottom: 12px;
   background-color: #496bbe;
   color: white;
-}
-
-input[type="entry"] {
-  font-family: inherit;
-  text-align: center;
-  width: 60%;
 }
 
 .Wrong {
@@ -123,7 +75,7 @@ input[type="entry"] {
 }
 
 /*Smaller screens*/
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
   h1 {
     font-size: 30px;
     transition: 500ms;
@@ -136,9 +88,13 @@ input[type="entry"] {
     margin-left: auto;
     margin-right: auto;
     transition: 500ms;
+    width: 90%;
   }
   .Options {
     flex-direction: row;
     transition: 500ms;
+  }
+  input[type="entry"] {
+    width: 90%;
   }
 }

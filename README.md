@@ -17,6 +17,7 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
+- Fix border color for focused entry boxs
 - Add the rest of the declension charts
 - Fix a lot of bad code
 </pre>

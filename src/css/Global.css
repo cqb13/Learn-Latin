@@ -1,0 +1,90 @@
+body {
+  background: #f5f7fa;
+  color: #444;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+a {
+  color: #496bbe;
+  text-decoration: none;
+}
+
+hr {
+  width: 80%;
+}
+
+nav {
+  text-align: left;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  background-color: #496bbe;
+}
+
+.Switch-Page {
+  color: #f5f7fa;
+  margin: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid #f5f7fa;
+  transition: 500ms;
+}
+
+.Switch-Page:hover {
+  scale: 1.1;
+}
+
+input[type="entry"] {
+  font-family: inherit;
+  text-align: center;
+  background-color: inherit;
+  color: #444;
+}
+
+.Switch-Page:active {
+  color: #444;
+  border: 2px solid #444;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  border: 2px solid #496bbe;
+  background-color: #f5f7fa;
+  transition: 500ms;
+}
+
+button:hover {
+  background-color: #496bbeb3;
+}
+
+button:active {
+  scale: 1.2;
+}
+
+.About-Container {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Resoruces-Container {
+  display: flex;
+  flex-direction: column;
+}
