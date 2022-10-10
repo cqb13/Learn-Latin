@@ -59,10 +59,10 @@ const Row = (info) => {
     <tr className={cName}>
       <td className='Side-Label'>{name}</td>
       <td>
-      <input type="entry" placeholder='Enter Declension' id={'s-' + info.row} onChange={handleChange} className="Normal"/>
+      <input type="text" placeholder='Enter Declension' id={'s-' + info.row} onChange={handleChange} className="Normal"/>
       </td>
       <td>
-      <input type="entry" placeholder='Enter Declension' id={'p-' + info.row} onChange={handleChange} className="Normal"/>
+      <input type="text" placeholder='Enter Declension' id={'p-' + info.row} onChange={handleChange} className="Normal"/>
       </td>
     </tr>
   )

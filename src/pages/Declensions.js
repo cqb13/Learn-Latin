@@ -30,7 +30,7 @@ const Declensions = () => {
     } else if (move === "left"){
       setChartCount(count -= 1);
       if (chartCount === 1) {
-        setChartCount(3);
+        setChartCount(chartAmount);
       }
     }
     clearValues();

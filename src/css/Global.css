@@ -21,9 +21,9 @@ hr {
 }
 
 nav {
-  text-align: left;
   display: flex;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 100%;
   background-color: #496bbe;
 }
@@ -31,6 +31,7 @@ nav {
 .Switch-Page {
   color: #f5f7fa;
   margin: 5px;
+  margin-left: 10px;
   font-size: 20px;
   text-decoration: none;
   padding: 5px;
@@ -40,13 +41,6 @@ nav {
 
 .Switch-Page:hover {
   scale: 1.1;
-}
-
-input[type="entry"] {
-  font-family: inherit;
-  text-align: center;
-  background-color: inherit;
-  color: #444;
 }
 
 .Switch-Page:active {
@@ -62,6 +56,14 @@ h2 {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+input[type="text"] {
+  font-family: inherit;
+  text-align: center;
+  background-color: inherit;
+  border: none;
+  color: #444;
 }
 
 button {
@@ -87,4 +89,19 @@ button:active {
 .Resoruces-Container {
   display: flex;
   flex-direction: column;
+}
+
+/*Exta small screens*/
+@media only screen and (max-width: 300px) {
+  .Switch-Page {
+    width: 30%;
+    font-size: 15px;
+  }
+}
+
+/*Smaller screens*/
+@media only screen and (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
 }

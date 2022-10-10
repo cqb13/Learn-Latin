@@ -32,10 +32,10 @@ const AnswerRow = (info) => {
     <tr className={cName}>
       <td className='Side-Label'>{name}</td>
       <td>
-      <input type="entry" value={singular} className="Right" readOnly/>
+      <input type="text" value={singular} className="Right" readOnly/>
       </td>
       <td>
-      <input type="entry" value={plural} className="Right" readOnly/>
+      <input type="text" value={plural} className="Right" readOnly/>
       </td>
     </tr>
   )

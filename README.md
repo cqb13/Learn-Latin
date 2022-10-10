@@ -12,12 +12,14 @@
 
 <h2>Features:</h2>
 <pre>
-- Declension charts 1-3
-- Declension charts 1-3 answers
+- Declension charts 1-5
+- Declension charts 1-5 answers
+- Resources for learning Latin
 </pre>
 <h2>TODO:</h2>
 <pre>
+- Add neutor endings for charts 3 & 4
+- Add whitakers words translations
 - Fix border color for focused entry boxs
-- Add the rest of the declension charts
 - Fix a lot of bad code
 </pre>

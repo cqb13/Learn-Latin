@@ -1,5 +1,5 @@
 {
-  "chart-count": 3,
+  "chart-count": 5,
   "name-map": {
     "name-1": "Nominative",
     "name-2": "Genative",
@@ -27,5 +27,19 @@
     "Dative": ["i", "ibus"],
     "Accusative": ["em", "es"],
     "Ablative": ["e", "ibus"]
+  },
+  "d-4": {
+    "Nominative": ["us", "ua"],
+    "Genative": ["us", "uum"],
+    "Dative": ["u", "ibus"],
+    "Accusative": ["u", "ua"],
+    "Ablative": ["u", "ibus"]
+  },
+  "d-5": {
+    "Nominative": ["es", "es"],
+    "Genative": ["ei", "erum"],
+    "Dative": ["ei", "ebus"],
+    "Accusative": ["em", "es"],
+    "Ablative": ["e", "ebus"]
   }
 }
