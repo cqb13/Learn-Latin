@@ -7,6 +7,10 @@ const AnswerRow = (info) => {
   var singular;
   var plural;
 
+  if (info.neuter === true) {
+    chart = data['d-'+ info.count +'-n']
+  }
+
   if (info.answers === false) {
     cName = 'Hidden'
   }

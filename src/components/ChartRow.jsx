@@ -5,6 +5,10 @@ const Row = (info) => {
   var chart = data['d-'+ info.count +''];
   var cName = '';
 
+  if (info.neuter === true) {
+    chart = data['d-'+ info.count +'-n']
+  }
+
   if (info.answers === true) {
     cName = 'Hidden'
   }
@@ -30,6 +34,8 @@ const Row = (info) => {
       answerState(event, "Normal");
     } else if (id === "s-1" && info.count === 3) {
       specialCheck(event, value, chart.Nominative[0]);
+    } else if (id === "s-4" && info.count === 3) {
+      specialCheck(event, value, chart.Accusative[0])
     } else if (id === "s-1" && value === chart.Nominative[0]){
       answerState(event, "Right");
     } else if (id === "s-2" && value === chart.Genative[0]) {

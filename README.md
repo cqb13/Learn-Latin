@@ -18,8 +18,7 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Add neutor endings for charts 3 & 4
+- Finish chart 3
 - Add whitakers words translations
-- Fix border color for focused entry boxs
 - Fix a lot of bad code
 </pre>

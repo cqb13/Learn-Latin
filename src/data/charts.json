@@ -28,8 +28,22 @@
     "Accusative": ["em", "es"],
     "Ablative": ["e", "ibus"]
   },
+  "d-3-n": {
+    "Nominative": [["--"], "a"],
+    "Genative": ["is", "um"],
+    "Dative": ["i", "ibus"],
+    "Accusative": [["--"], "a"],
+    "Ablative": ["e", "ibus"]
+  },
   "d-4": {
-    "Nominative": ["us", "ua"],
+    "Nominative": ["us", "us"],
+    "Genative": ["us", "uum"],
+    "Dative": ["ui", "ibus"],
+    "Accusative": ["um", "us"],
+    "Ablative": ["u", "ibus"]
+  },
+  "d-4-n": {
+    "Nominative": ["u", "ua"],
     "Genative": ["us", "uum"],
     "Dative": ["u", "ibus"],
     "Accusative": ["u", "ua"],

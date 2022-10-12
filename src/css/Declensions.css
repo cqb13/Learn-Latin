@@ -86,8 +86,18 @@ input[type="text"]:focus {
   }
 }
 
+/*Exta small screens*/
+@media only screen and (max-width: 300px) {
+  .Switch-Chart {
+    font-size: 20px;
+  }
+  .Chart-Option {
+    font-size: 20px;
+  }
+}
+
 /*Phones*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
   .Content {
     scale: 0.9;
     transition: 500ms;
@@ -114,7 +124,7 @@ input[type="text"]:focus {
     flex-direction: row;
     transition: 500ms;
   }
-  input[type="entry"] {
+  input[type="text"] {
     width: 90%;
   }
 }
