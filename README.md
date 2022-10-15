@@ -18,7 +18,6 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Finish chart 3
-- Add whitakers words translations
+- Format Whitakers Words translation
 - Fix a lot of bad code
 </pre>

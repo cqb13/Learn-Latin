@@ -1,0 +1,19 @@
+main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.Search {
+  width: 80%;
+  font-size: 20px;
+  outline-color: #496bbe;
+  padding: 5px;
+}
+
+.Option {
+  width: 30%;
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
