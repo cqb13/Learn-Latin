@@ -14,10 +14,11 @@
 <pre>
 - Declension charts 1-5
 - Declension charts 1-5 answers
+- Word translation (uses whitakers words)
 - Resources for learning Latin
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Format Whitakers Words translation
+- Fix mobile css
 - Fix a lot of bad code
 </pre>

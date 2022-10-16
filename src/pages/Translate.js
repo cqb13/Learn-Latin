@@ -42,8 +42,8 @@ const Translate = () => {
               <button className='Option' onClick={() => ETL(search)}>English to Latin</button>
             </div>
           </div>
-          <div>
-            <p>{data}</p>
+          <div className='Results'>
+            <pre>{data}</pre>
           </div>
         </main>
       </div>
