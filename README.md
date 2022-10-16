@@ -19,6 +19,5 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Fix mobile css
 - Fix a lot of bad code
 </pre>

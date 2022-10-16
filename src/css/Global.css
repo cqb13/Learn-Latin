@@ -94,7 +94,6 @@ button:active {
   flex-direction: column;
 }
 
-/*Exta small screens*/
 @media only screen and (max-width: 300px) {
   .Switch-Page {
     width: 30%;
@@ -102,9 +101,16 @@ button:active {
   }
 }
 
-/*Smaller screens*/
+@media only screen and (max-width: 530px) {
+  .Switch-Page {
+    margin: 2px;
+    font-size: 4vw;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   nav {
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
   }
 }

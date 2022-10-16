@@ -25,6 +25,8 @@ const Declensions = () => {
         setChartCount(chartAmount);
       }
     }
+    setNeuterChart(false);
+    setExtraLabel("");
     clearValues();
   }
 
@@ -59,7 +61,6 @@ const Declensions = () => {
     )
   }
 
-  //TODO: maybe move neuter declension toggle down to bottom???
   return (
     <div>
       <header className="Header">

@@ -18,6 +18,7 @@ function App() {
         <Route path="/Declensions" element={<Declensions />} />
         <Route path="/Translate" element={<Translate/>} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </Router>
   );

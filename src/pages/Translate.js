@@ -2,9 +2,12 @@ import { useState } from 'react'
 
 const Translate = () => {
     const [data, setData] = useState("");
+    const [displayWord, setDisplayWord] = useState("");
     const [search, setSearch] = useState();
 
     const LTE = (word) => {
+      setDisplayWord(word);
+      setSearch("");
       fetch('https://whitakers-words-get.cqb13.repl.co/LTE?word=' + word).then(
         res => res.text()
       ).then(
@@ -15,6 +18,8 @@ const Translate = () => {
     }
 
     const ETL = (word) => {
+      setDisplayWord(word);
+      setSearch("");
       fetch('https://whitakers-words-get.cqb13.repl.co/ETL?word=' + word).then(
         res => res.text()
       ).then(
@@ -43,7 +48,8 @@ const Translate = () => {
             </div>
           </div>
           <div className='Results'>
-            <pre>{data}</pre>
+            <h2>{displayWord}</h2>
+            <pre className='Text'>{data}</pre>
           </div>
         </main>
       </div>
