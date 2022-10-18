@@ -31,7 +31,6 @@
   color: white;
 }
 
-
 input[type="text"] {
   outline-style: solid;
   outline-width: 2px;
@@ -53,10 +52,6 @@ input[type="text"]:focus {
   outline-color: #444;
 }
 
-.Hidden {
-  display: none;
-}
-
 .Switch-Chart {
   margin: 10px;
   font-size: 50px;
@@ -74,16 +69,6 @@ input[type="text"]:focus {
   margin: 10px;
   width: 40%;
   font-size: 25px;
-}
-
-/*Exta small screens*/
-@media only screen and (max-width: 300px) {
-  .Switch-Chart {
-    font-size: 20px;
-  }
-  .Chart-Option {
-    font-size: 20px;
-  }
 }
 
 /*Exta small screens*/

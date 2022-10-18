@@ -14,10 +14,13 @@
 <pre>
 - Declension charts 1-5
 - Declension charts 1-5 answers
+- Future tense charts 1-2
+- Verb conjugation endings 1-5
 - Word translation (uses whitakers words)
 - Resources for learning Latin
 </pre>
 <h2>TODO:</h2>
 <pre>
+- Fix mobile css
 - Fix a lot of bad code
 </pre>

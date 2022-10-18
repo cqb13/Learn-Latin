@@ -1,13 +1,15 @@
 import React from "react";
 import "./css/Global.css";
-import './css/Declensions.css';
+import "./css/Charts.css";
 import "./css/Translate.css";
 import Navbar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages"
-import Declensions from "./pages/Declensions";
+import Home from "./pages";
+import Charts from "./pages/Charts";
+import Translate from "./pages/Translate";
 import Resources from "./pages/Resources";
-import Translate from './pages/Translate'
+import Declensions from "./pages/Declensions";
+import FutureTense from "./pages/FutureTense";
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Declensions" element={<Declensions />} />
-        <Route path="/Translate" element={<Translate/>} />
+        <Route path="/Charts" element={<Charts />} />
+        <Route path="/Translate" element={<Translate />} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="/Charts/Declensions" element={<Declensions />} />
+        <Route path="/Charts/Future-Tense" element={<FutureTense />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>

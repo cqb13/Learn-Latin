@@ -1,0 +1,59 @@
+{
+  "chart-count": 5,
+  "name-map": {
+    "name-1": "Nominative",
+    "name-2": "Genative",
+    "name-3": "Dative",
+    "name-4": "Accusative",
+    "name-5": "Ablative"
+  },
+  "d-1": {
+    "First": ["a", "ae"],
+    "Second": ["ae", "arum"],
+    "Third": ["ae", "is"],
+    "Fourth": ["am", "as"],
+    "Fifth": ["a", "is"]
+  },
+  "d-2": {
+    "First": ["us", "i"],
+    "Second": ["i", "orum"],
+    "Third": ["o", "is"],
+    "Fourth": ["um", "os"],
+    "Fifth": ["o", "is"]
+  },
+  "d-3": {
+    "First": [["r", "x", "s", "o", "n", "l"], "es"],
+    "Second": ["is", "um"],
+    "Third": ["i", "ibus"],
+    "Fourth": ["em", "es"],
+    "Fifth": ["e", "ibus"]
+  },
+  "d-3-n": {
+    "First": [["--"], "a"],
+    "Second": ["is", "um"],
+    "Third": ["i", "ibus"],
+    "Fourth": [["--"], "a"],
+    "Fifth": ["e", "ibus"]
+  },
+  "d-4": {
+    "First": ["us", "us"],
+    "Second": ["us", "uum"],
+    "Third": ["ui", "ibus"],
+    "Fourth": ["um", "us"],
+    "Fifth": ["u", "ibus"]
+  },
+  "d-4-n": {
+    "First": ["u", "ua"],
+    "Second": ["us", "uum"],
+    "Third": ["u", "ibus"],
+    "Fourth": ["u", "ua"],
+    "Fifth": ["u", "ibus"]
+  },
+  "d-5": {
+    "First": ["es", "es"],
+    "Second": ["ei", "erum"],
+    "Third": ["ei", "ebus"],
+    "Fourth": ["em", "es"],
+    "Fifth": ["e", "ebus"]
+  }
+}

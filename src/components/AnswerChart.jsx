@@ -1,35 +1,41 @@
-import data from '../data/charts.json';
+import dataDec from '../data/DeclensionCharts.json';
+import dataFuture from "../data/FutureTenseChart.json";
 
 const AnswerRow = (info) => {
-  var name = data['name-map']['name-'+ info.row]
-  var chart = data['d-'+ info.count];
+  var name = dataDec['name-map']['name-'+ info.row]
+  var chart = dataDec['d-'+ info.count];
   var cName = '';
   var singular;
   var plural;
 
+  if (info.chart === "f") {
+    name = dataFuture["name-map"]["name-" + info.row];
+    chart = dataFuture["f-" + info.count];
+  }
+
   if (info.neuter === true) {
-    chart = data['d-'+ info.count +'-n']
+    chart = dataDec['d-'+ info.count +'-n']
   }
 
   if (info.answers === false) {
     cName = 'Hidden'
   }
 
-  if (name === "Nominative") {
-    singular = chart.Nominative[0];
-    plural = chart.Nominative[1];
-  } else if (name === "Genative") {
-    singular = chart.Genative[0];
-    plural = chart.Genative[1];
-  } else if (name === "Dative") {
-    singular = chart.Dative[0];
-    plural = chart.Dative[1];
+  if (name === "Nominative" || name === "1st") {
+    singular = chart.First[0];
+    plural = chart.First[1];
+  } else if (name === "Genative" || name === "2nd") {
+    singular = chart.Second[0];
+    plural = chart.Second[1];
+  } else if (name === "Dative" || name === "3rd") {
+    singular = chart.Third[0];
+    plural = chart.Third[1];
   } else if (name === "Accusative") {
-    singular = chart.Accusative[0];
-    plural = chart.Accusative[1];
-  } else {
-    singular = chart.Ablative[0];
-    plural = chart.Ablative[1];
+    singular = chart.Fourth[0];
+    plural = chart.Fourth[1];
+  } else if (name === "Ablative"){
+    singular = chart.Fifth[0];
+    plural = chart.Fifth[1];
   }
 
   return (
