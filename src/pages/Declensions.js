@@ -48,6 +48,7 @@ const Declensions = () => {
       setNeuterChart(false)
       setExtraLabel("")
     }
+    clearValues();
   }
 
   const NeuterChartBTN = () => {

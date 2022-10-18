@@ -28,6 +28,7 @@ const PersonalEndings = () => {
       setMeaningChart(false);
       setExtraLabel("");
     }
+    clearValues();
   }
 
   return (

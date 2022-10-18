@@ -46,9 +46,9 @@ const Row = (info) => {
     let id = event.target.id;
     if (value === "") {
       answerState(event, "Normal");
-    } else if (id === "s-1" && info.count === 3 || id === "s-1" && chart === dataPresent["p-1"]) {
+    } else if (id === "s-1" && (info.count === 3 || chart === dataPresent["p-1"])) {
       specialCheck(event, value, chart.First[0]);
-    } else if (id == "s-3" && chart === dataPresent["p-1-m"]) {
+    } else if (id === "s-3" && chart === dataPresent["p-1-m"]) {
       specialCheck(event, value, chart.Third[0]);
     }else if (id === "s-4" && info.count === 3 && info.neuter === true) {
       specialCheck(event, value, chart.Fourth[0]);
