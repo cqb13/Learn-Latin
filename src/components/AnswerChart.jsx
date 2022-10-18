@@ -1,5 +1,6 @@
 import dataDec from '../data/DeclensionCharts.json';
 import dataFuture from "../data/FutureTenseChart.json";
+import dataPresent from "../data/PersonalEndingsChart.json";
 
 const AnswerRow = (info) => {
   var name = dataDec['name-map']['name-'+ info.row]
@@ -11,14 +12,21 @@ const AnswerRow = (info) => {
   if (info.chart === "f") {
     name = dataFuture["name-map"]["name-" + info.row];
     chart = dataFuture["f-" + info.count];
+  } else if (info.chart === "p") {
+    name = dataPresent["name-map"]["name-" + info.row];
+    chart = dataPresent["p-1"];
   }
 
   if (info.neuter === true) {
-    chart = dataDec['d-'+ info.count +'-n']
+    chart = dataDec['d-'+ info.count +'-n'];
+  }
+
+  if (info.meaning === true) {
+    chart = dataPresent["p-1-m"];
   }
 
   if (info.answers === false) {
-    cName = 'Hidden'
+    cName = 'Hidden';
   }
 
   if (name === "Nominative" || name === "1st") {

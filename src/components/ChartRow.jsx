@@ -1,5 +1,6 @@
 import dataDec from "../data/DeclensionCharts.json";
 import dataFuture from "../data/FutureTenseChart.json";
+import dataPresent from "../data/PersonalEndingsChart.json";
 
 const Row = (info) => {
   var name = dataDec["name-map"]["name-" + info.row];
@@ -9,10 +10,17 @@ const Row = (info) => {
   if (info.chart === "f") {
     name = dataFuture["name-map"]["name-" + info.row];
     chart = dataFuture["f-" + info.count];
+  } else if (info.chart === "p") {
+    name = dataPresent["name-map"]["name-" + info.row];
+    chart = dataPresent["p-1"];
   }
 
   if (info.neuter === true) {
     chart = dataDec["d-" + info.count + "-n"];
+  }
+
+  if (info.meaning === true) {
+    chart = dataPresent["p-1-m"];
   }
 
   if (info.answers === true) {
@@ -38,9 +46,11 @@ const Row = (info) => {
     let id = event.target.id;
     if (value === "") {
       answerState(event, "Normal");
-    } else if (id === "s-1" && info.count === 3 && info.neuter === true) {
+    } else if (id === "s-1" && info.count === 3 || id === "s-1" && chart === dataPresent["p-1"]) {
       specialCheck(event, value, chart.First[0]);
-    } else if (id === "s-4" && info.count === 3 && info.neuter === true) {
+    } else if (id == "s-3" && chart === dataPresent["p-1-m"]) {
+      specialCheck(event, value, chart.Third[0]);
+    }else if (id === "s-4" && info.count === 3 && info.neuter === true) {
       specialCheck(event, value, chart.Fourth[0]);
     } else if (id === "s-1" && value === chart.First[0]) {
       answerState(event, "Right");

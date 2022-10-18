@@ -1,0 +1,17 @@
+{
+  "name-map": {
+    "name-1": "1st",
+    "name-2": "2nd",
+    "name-3": "3rd"
+  },
+  "p-1": {
+    "First": [["o", "m"], "mus"],
+    "Second": ["s", "tis"],
+    "Third": ["t", "nt"]
+  }, 
+  "p-1-m": {
+    "First": ["i", "we"],
+    "Second": ["you", "you all"],
+    "Third": [["he", "she", "it"], "they"]
+  }
+}

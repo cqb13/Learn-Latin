@@ -68,7 +68,6 @@ const Declensions = () => {
       </header>
       <hr/>
       <h2>Declension Chart {chartCount}/{chartAmount} {extraLabel}</h2>
-      <NeuterChartBTN/>
       <div className='Content'>
       <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>{'<'}</button>
       <table className="Chart">
@@ -91,6 +90,7 @@ const Declensions = () => {
       <button className='Switch-Chart' onClick={() => swtichChart(count, "right")}>{'>'}</button>
       </div>
       <div className="Options">
+      <NeuterChartBTN/>
       <button className='Chart-Option' onClick={() => clearValues()}>Clear Answers</button>
       <button className='Chart-Option' onClick={() => handleClick()}>{answerBtnName}</button>
       </div>

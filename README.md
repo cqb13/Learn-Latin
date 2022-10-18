@@ -15,6 +15,9 @@
 - Declension charts 1-5
 - Declension charts 1-5 answers
 - Future tense charts 1-2
+- Personal endings chart
+- Present tense 
+- Imperfect Tense
 - Verb conjugation endings 1-5
 - Word translation (uses whitakers words)
 - Resources for learning Latin

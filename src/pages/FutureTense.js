@@ -2,7 +2,8 @@ import { useState } from "react";
 import data from '../data/FutureTenseChart.json';
 import AnswerRow from '../components/AnswerChart';
 import Row from '../components/ChartRow';
-import VerbConjugations from '../components/VerbConjugations';
+import Dropdown from "../components/Dropdown";
+import DropdownList from '../data/DropdownLists.json';
 
 const FutureTense = () => {
   const [chartCount, setChartCount] = useState(1);
@@ -43,7 +44,17 @@ const FutureTense = () => {
       </header>
       <hr/>
       <h2>Future Tense Chart {chartCount}/{chartAmount}</h2>
-      <VerbConjugations/>
+      <details className="Dropdown"><summary>Identify Verb Conjugations</summary>
+      {DropdownList["IDVC"]?.length > 0 ? (
+        <div className="container">
+          {DropdownList["IDVC"].map((IDVC) => (
+            <Dropdown info={IDVC} />
+          ))}
+        </div>
+      ) : (
+        <></>
+      )}
+      </details>
       <h3>{data["action-"+ chartCount]}</h3>
       <div className='Content'>
       <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>{'<'}</button>
