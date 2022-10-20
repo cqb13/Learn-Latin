@@ -1,14 +1,18 @@
-main {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
 .Search {
   width: 80%;
   font-size: 25px;
   outline-color: #496bbe;
   padding: 5px;
+}
+
+.Search-Options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Search-Term {
+  text-align: center;
 }
 
 .Option {
@@ -20,17 +24,15 @@ main {
 }
 
 .Results {
-  text-align: left;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  margin: auto auto auto auto;
   font-size: 20px;
 }
 
 .Text {
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto auto auto auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -42,5 +44,14 @@ main {
 @media only screen and (max-width: 670px) {
   .Results {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Search-Options {
+    flex-direction: column;
+  }
+  .Option {
+    width: 100%;
   }
 }

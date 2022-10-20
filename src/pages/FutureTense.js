@@ -1,31 +1,31 @@
 import { useState } from "react";
-import data from '../data/FutureTenseChart.json';
-import AnswerRow from '../components/AnswerChart';
-import Row from '../components/ChartRow';
+import data from "../data/FutureTenseChart.json";
+import AnswerRow from "../components/AnswerChart";
+import Row from "../components/ChartRow";
 import Dropdown from "../components/Dropdown";
-import DropdownList from '../data/DropdownLists.json';
+import DropdownList from "../data/DropdownLists.json";
 
 const FutureTense = () => {
   const [chartCount, setChartCount] = useState(1);
   const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
   const [visibleAnswers, setVisibleAnswers] = useState(false);
-  const chartAmount = data['chart-count'];
+  const chartAmount = data["chart-count"];
   var count = chartCount;
 
   const swtichChart = (count, move) => {
     if (move === "right") {
-      setChartCount(count += 1);
+      setChartCount((count += 1));
       if (chartCount === chartAmount) {
         setChartCount(1);
       }
-    } else if (move === "left"){
-      setChartCount(count -= 1);
+    } else if (move === "left") {
+      setChartCount((count -= 1));
       if (chartCount === 1) {
         setChartCount(chartAmount);
       }
     }
     clearValues();
-  }
+  };
 
   const handleClick = () => {
     if (answerBtnName === "Hide Answers") {
@@ -35,61 +35,60 @@ const FutureTense = () => {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
     }
-  }
+  };
 
   return (
     <div>
       <header className="Header">
-      <h1>Learn Latin Future Tense</h1>
+        <h1>Learn Latin Future Tense</h1>
       </header>
       <hr/>
       <h2>Future Tense Chart {chartCount}/{chartAmount}</h2>
-      <details className="Dropdown"><summary>Identify Verb Conjugations</summary>
+      <details className="Dropdown">
+      <summary>Identify Verb Conjugations</summary>
       {DropdownList["IDVC"]?.length > 0 ? (
         <div className="container">
           {DropdownList["IDVC"].map((IDVC) => (
             <Dropdown info={IDVC} />
           ))}
         </div>
-      ) : (
-        <></>
-      )}
+      ) : (<></>)}
       </details>
-      <h3>{data["action-"+ chartCount]}</h3>
-      <div className='Content'>
-      <button className='Switch-Chart' onClick={() => swtichChart(count, "left")}>{'<'}</button>
-      <table className="Chart">
-      <tr>
-      <th>Form</th>
-      <th>Singular</th>
-      <th>Plural</th>
-      </tr>
-      <Row count={chartCount} row={1} answers={visibleAnswers} chart={"f"}/>
-      <Row count={chartCount} row={2} answers={visibleAnswers} chart={"f"}/>
-      <Row count={chartCount} row={3} answers={visibleAnswers} chart={"f"}/>
-      <AnswerRow count={chartCount} row={1} answers={visibleAnswers} chart={"f"}/>
-      <AnswerRow count={chartCount} row={2} answers={visibleAnswers} chart={"f"}/>
-      <AnswerRow count={chartCount} row={3} answers={visibleAnswers} chart={"f"}/>
-      </table>
-      <button className='Switch-Chart' onClick={() => swtichChart(count, "right")}>{'>'}</button>
+      <h3>{data["action-" + chartCount]}</h3>
+      <div className="Content">
+        <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>
+        <table className="Chart">
+          <tr>
+            <th>Form</th>
+            <th>Singular</th>
+            <th>Plural</th>
+          </tr>
+          <Row count={chartCount} row={1} answers={visibleAnswers} chart={"f"}/>
+          <Row count={chartCount} row={2} answers={visibleAnswers} chart={"f"}/>
+          <Row count={chartCount} row={3} answers={visibleAnswers} chart={"f"}/>
+          <AnswerRow count={chartCount} row={1} answers={visibleAnswers} chart={"f"}/>
+          <AnswerRow count={chartCount} row={2} answers={visibleAnswers} chart={"f"}/>
+          <AnswerRow count={chartCount} row={3} answers={visibleAnswers} chart={"f"}/>
+        </table>
+        <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
-      <button className='Chart-Option' onClick={() => clearValues()}>Clear Answers</button>
-      <button className='Chart-Option' onClick={() => handleClick()}>{answerBtnName}</button>
+        <button className="Chart-Option" onClick={() => clearValues()}>Clear Answers</button>
+        <button className="Chart-Option" onClick={() => handleClick()}>{answerBtnName}</button>
       </div>
     </div>
   );
-}
+};
 
 const clearValues = () => {
   var loop = 1;
   while (loop < 6) {
-    document.getElementById('p-'+ loop +'').className = "Normal";
-    document.getElementById('p-'+ loop +'').value = "";
-    document.getElementById('s-'+ loop +'').className = "Normal";
-    document.getElementById('s-'+ loop +'').value = "";
+    document.getElementById("p-" + loop + "").className = "Normal";
+    document.getElementById("p-" + loop + "").value = "";
+    document.getElementById("s-" + loop + "").className = "Normal";
+    document.getElementById("s-" + loop + "").value = "";
     loop += 1;
   }
-}
+};
 
 export default FutureTense;

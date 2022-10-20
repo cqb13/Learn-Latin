@@ -60,18 +60,17 @@ input[type="text"]:focus {
 
 .Options {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
 .Chart-Option {
   margin: 10px;
-  width: 40%;
+  width: 20%;
   font-size: 25px;
 }
 
-/*Exta small screens*/
 @media only screen and (max-width: 300px) {
   .Switch-Chart {
     font-size: 20px;
@@ -81,33 +80,28 @@ input[type="text"]:focus {
   }
 }
 
-/*Phones*/
 @media only screen and (max-width: 480px) {
   .Content {
     scale: 0.9;
-    transition: 500ms;
+  }
+  .Chart-Option {
+    margin-top: 0px;
+  }
+  .Switch-Chart {
+    margin-bottom: 0px;
   }
 }
 
-/*Smaller screens*/
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 30px;
-    transition: 500ms;
   }
   .Content {
     flex-direction: column;
-    transition: 500ms;
   }
   .Chart {
-    margin-left: auto;
-    margin-right: auto;
-    transition: 500ms;
+    margin: auto auto auto auto;
     width: 90%;
-  }
-  .Options {
-    flex-direction: row;
-    transition: 500ms;
   }
   input[type="text"] {
     width: 90%;

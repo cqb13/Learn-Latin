@@ -7,6 +7,9 @@ const Navbar = () => {
       <Link to="/charts" className="Switch-Page">Charts</Link>
       <Link to="/translate" className="Switch-Page">Translate</Link>
       <Link to="/resources" className="Switch-Page">Resources</Link>
+      <Link to="/" className="Icon">
+        <img src='../Logo.png' width="40px" height="40px" alt="Logo not found"></img>
+      </Link>
     </nav>
   );
 };

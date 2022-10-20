@@ -1,11 +1,11 @@
-import dataDec from '../data/DeclensionCharts.json';
+import dataDec from "../data/DeclensionCharts.json";
 import dataFuture from "../data/FutureTenseChart.json";
 import dataPresent from "../data/PersonalEndingsChart.json";
 
 const AnswerRow = (info) => {
-  var name = dataDec['name-map']['name-'+ info.row]
-  var chart = dataDec['d-'+ info.count];
-  var cName = '';
+  var name = dataDec["name-map"]["name-" + info.row];
+  var chart = dataDec["d-" + info.count];
+  var cName = "";
   var singular;
   var plural;
 
@@ -18,7 +18,7 @@ const AnswerRow = (info) => {
   }
 
   if (info.neuter === true) {
-    chart = dataDec['d-'+ info.count +'-n'];
+    chart = dataDec["d-" + info.count + "-n"];
   }
 
   if (info.meaning === true) {
@@ -26,7 +26,7 @@ const AnswerRow = (info) => {
   }
 
   if (info.answers === false) {
-    cName = 'Hidden';
+    cName = "Hidden";
   }
 
   if (name === "Nominative" || name === "1st") {
@@ -41,22 +41,22 @@ const AnswerRow = (info) => {
   } else if (name === "Accusative") {
     singular = chart.Fourth[0];
     plural = chart.Fourth[1];
-  } else if (name === "Ablative"){
+  } else if (name === "Ablative") {
     singular = chart.Fifth[0];
     plural = chart.Fifth[1];
   }
 
   return (
     <tr className={cName}>
-      <td className='Side-Label'>{name}</td>
+      <td className="Side-Label">{name}</td>
       <td>
-      <input type="text" value={singular} className="Right" readOnly/>
+        <input type="text" value={singular} className="Right" readOnly />
       </td>
       <td>
-      <input type="text" value={plural} className="Right" readOnly/>
+        <input type="text" value={plural} className="Right" readOnly />
       </td>
     </tr>
-  )
-}
+  );
+};
 
-export default AnswerRow
+export default AnswerRow;

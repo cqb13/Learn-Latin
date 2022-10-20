@@ -9,9 +9,7 @@ const Charts = () => {
       <hr />
       <main>
         <h2>Select A Chart</h2>
-        <div className="Sub-Menu-Container">
-          <ChartNav />
-        </div>
+        <ChartNav />
       </main>
     </div>
   );

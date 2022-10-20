@@ -1,7 +1,5 @@
-const IDVerbConjugations = ({info}) => {
-    return (
-      <p>{info}</p>
-    );
-  };
-    
-  export default IDVerbConjugations;
+const IDVerbConjugations = ({ info }) => {
+  return <p>{info}</p>;
+};
+
+export default IDVerbConjugations;

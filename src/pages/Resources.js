@@ -2,9 +2,9 @@ const Home = () => {
   const Link = (info) => {
     return (
       <>
-      <a href={info.link}>{info.name}</a>
-      <p>{info.description}</p>
-      <hr />
+        <a href={info.link}>{info.name}</a>
+        <p>{info.description}</p>
+        <hr />
       </>
     );
   };

@@ -2,9 +2,9 @@
   <!-- Logo and Title -->
   <img src="https://raw.githubusercontent.com/cqb13/Learn-Latin-Declensions/master/public/Logo.png" alt="logo" width="20%"/>
   <h1>Learn Latin Declensions</a></h1>
-  <p>A simple website to practice and learn Latin declension endings</p>
+  <p>A website with many resources to help you learn Latin!</p>
 
-[Start learning now!](https://cqb13.github.io/Learn-Latin-Declensions/)
+[Start learning now!](https://learn-latin.ml/)
 
 </div>
 
@@ -24,6 +24,6 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Fix mobile css
+- Find good place/action for logo
 - Fix a lot of bad code
 </pre>

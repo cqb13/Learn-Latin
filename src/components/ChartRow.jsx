@@ -41,8 +41,8 @@ const Row = (info) => {
   };
 
   // checks that the right value is entered in the right spot on chart
-  const handleChange = event => {
-    let value = (event.target.value).toLowerCase();
+  const handleChange = (event) => {
+    let value = event.target.value.toLowerCase();
     let id = event.target.id;
     if (value === "") {
       answerState(event, "Normal");
