@@ -45,7 +45,7 @@ const Translate = () => {
         </div>
         <div className="Results">
           <h2 className="Search-Term">{displayWord}</h2>
-          <pre className="Text">{data}</pre>
+          <pre className="Translation-Display">{data}</pre>
         </div>
       </main>
     </div>

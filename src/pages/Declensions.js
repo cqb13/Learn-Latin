@@ -1,13 +1,12 @@
 import { useState } from "react";
 import data from "../data/DeclensionCharts.json";
-import AnswerRow from "../components/AnswerChart";
-import Row from "../components/ChartRow";
+import Chart from "../components/Chart";
 
 const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);
   const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
   const [visibleAnswers, setVisibleAnswers] = useState(false);
-  const [neuterChart, setNeuterChart] = useState(false);
+  const [neuterChart, setNeuterChart] = useState("");
   const [extraLabel, setExtraLabel] = useState("");
   const chartAmount = data["chart-count"];
   var count = chartCount;
@@ -25,12 +24,12 @@ const Declensions = () => {
         setChartCount(chartAmount);
       }
     }
-    setNeuterChart(false);
+    setNeuterChart("");
     setExtraLabel("");
     clearValues();
   };
 
-  const handleClick = () => {
+  const toggleAnswers = () => {
     if (answerBtnName === "Hide Answers") {
       setAnswerBtnName("Show Answers");
       setVisibleAnswers(false);
@@ -38,17 +37,26 @@ const Declensions = () => {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
     }
+    clearValues();
   };
 
   const toggleNeuterChart = () => {
-    if (neuterChart === false) {
-      setNeuterChart(true);
+    if (neuterChart === "") {
+      setNeuterChart("-n");
       setExtraLabel("Neuter");
     } else {
-      setNeuterChart(false);
+      setNeuterChart("");
       setExtraLabel("");
     }
     clearValues();
+  };
+
+  const clearValues = () => {
+    var input = document.getElementsByName("answer");
+    for (let i = 0; i < input.length; i++) {
+      input[i].className = "Normal";
+      input[i].value = "";
+    }
   };
 
   const NeuterChartBTN = () => {
@@ -77,37 +85,25 @@ const Declensions = () => {
             <th>Singular</th>
             <th>Plural</th>
           </tr>
-          <Row count={chartCount} row={1} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <Row count={chartCount} row={2} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <Row count={chartCount} row={3} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <Row count={chartCount} row={4} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <Row count={chartCount} row={5} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <AnswerRow count={chartCount} row={1} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <AnswerRow count={chartCount} row={2} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <AnswerRow count={chartCount} row={3} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <AnswerRow count={chartCount} row={4} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
-          <AnswerRow count={chartCount} row={5} answers={visibleAnswers} neuter={neuterChart} chart={"d"}/>
+          {data["d-" + chartCount + neuterChart]?.length > 0 ? (
+            <>
+            {data["d-" + chartCount + neuterChart].map((info) => (
+              <Chart count={chartCount} answers={visibleAnswers} info={info}/>
+            ))}
+            </>
+          ) : (
+          <></>
+          )}
         </table>
         <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
         <NeuterChartBTN />
         <button className="Chart-Option" onClick={() => clearValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => handleClick()}>{answerBtnName}</button>
+        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
       </div>
     </div>
   );
-};
-
-const clearValues = () => {
-  var loop = 1;
-  while (loop < 6) {
-    document.getElementById("p-" + loop + "").className = "Normal";
-    document.getElementById("p-" + loop + "").value = "";
-    document.getElementById("s-" + loop + "").className = "Normal";
-    document.getElementById("s-" + loop + "").value = "";
-    loop += 1;
-  }
 };
 
 export default Declensions;

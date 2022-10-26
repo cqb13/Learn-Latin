@@ -1,7 +1,6 @@
 import { useState } from "react";
 import data from "../data/FutureTenseChart.json";
-import AnswerRow from "../components/AnswerChart";
-import Row from "../components/ChartRow";
+import Chart from "../components/Chart";
 import Dropdown from "../components/Dropdown";
 import DropdownList from "../data/DropdownLists.json";
 
@@ -27,13 +26,22 @@ const FutureTense = () => {
     clearValues();
   };
 
-  const handleClick = () => {
+  const toggleAnswers = () => {
     if (answerBtnName === "Hide Answers") {
       setAnswerBtnName("Show Answers");
       setVisibleAnswers(false);
     } else {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
+    }
+    clearValues();
+  };
+
+  const clearValues = () => {
+    var input = document.getElementsByName("answer");
+    for (let i = 0; i < input.length; i++) {
+      input[i].className = "Normal";
+      input[i].value = "";
     }
   };
 
@@ -63,32 +71,24 @@ const FutureTense = () => {
             <th>Singular</th>
             <th>Plural</th>
           </tr>
-          <Row count={chartCount} row={1} answers={visibleAnswers} chart={"f"}/>
-          <Row count={chartCount} row={2} answers={visibleAnswers} chart={"f"}/>
-          <Row count={chartCount} row={3} answers={visibleAnswers} chart={"f"}/>
-          <AnswerRow count={chartCount} row={1} answers={visibleAnswers} chart={"f"}/>
-          <AnswerRow count={chartCount} row={2} answers={visibleAnswers} chart={"f"}/>
-          <AnswerRow count={chartCount} row={3} answers={visibleAnswers} chart={"f"}/>
+          {data["f-" + chartCount]?.length > 0 ? (
+            <>
+            {data["f-" + chartCount].map((info) => (
+              <Chart count={chartCount} answers={visibleAnswers} info={info}/>
+            ))}
+            </>
+          ) : (
+          <></>
+          )}
         </table>
         <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
         <button className="Chart-Option" onClick={() => clearValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => handleClick()}>{answerBtnName}</button>
+        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
       </div>
     </div>
   );
-};
-
-const clearValues = () => {
-  var loop = 1;
-  while (loop < 6) {
-    document.getElementById("p-" + loop + "").className = "Normal";
-    document.getElementById("p-" + loop + "").value = "";
-    document.getElementById("s-" + loop + "").className = "Normal";
-    document.getElementById("s-" + loop + "").value = "";
-    loop += 1;
-  }
 };
 
 export default FutureTense;

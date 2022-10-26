@@ -1,20 +1,15 @@
 {
   "chart-count": 2,
-  "name-map": {
-    "name-1": "1st",
-    "name-2": "2nd",
-    "name-3": "3rd"
-  },
   "action-1": "For 1st & 2nd conjugation verbs: Drop \"re\" of 2nd principal part/infinitive ➡ Add chart ending",
   "action-2": "For 3rd, 3rd-io, and 4th conjugation verbs: Drop \"o\" of 1st principal part/infinitive ➡ Add chart ending",
-  "f-1": {
-    "First": ["bo", "bimus"],
-    "Second": ["bis", "bitis"],
-    "Third": ["bit", "bunt"]
-  },
-  "f-2": {
-    "First": ["am", "emus"],
-    "Second": ["es", "etis"],
-    "Third": ["et", "ent"]
-  }
+  "f-1": [
+    ["1st", "bo", "bimus"],
+    ["2nd", "bis", "bitis"],
+    ["3rd", "bit", "bunt"]
+  ],
+  "f-2": [
+    ["1st", "am", "emus"],
+    ["2nd", "es", "etis"],
+    ["3rd", "et", "ent"]
+  ]
 }

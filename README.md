@@ -24,6 +24,6 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Find good place/action for logo
+- Change formating of translation to allow for centered text
 - Fix a lot of bad code
 </pre>
