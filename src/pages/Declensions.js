@@ -1,6 +1,10 @@
 import { useState } from "react";
 import data from "../data/DeclensionCharts.json";
+import Dropdown from "../components/Dropdown";
+import DropdownList from "../data/DropdownLists.json";
 import Chart from "../components/Chart";
+import ChartTitle from "../components/ChartTitle";
+import { clearChartValues } from "../Funtions";
 
 const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);
@@ -26,7 +30,7 @@ const Declensions = () => {
     }
     setNeuterChart("");
     setExtraLabel("");
-    clearValues();
+    clearChartValues();
   };
 
   const toggleAnswers = () => {
@@ -37,7 +41,6 @@ const Declensions = () => {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
     }
-    clearValues();
   };
 
   const toggleNeuterChart = () => {
@@ -48,15 +51,7 @@ const Declensions = () => {
       setNeuterChart("");
       setExtraLabel("");
     }
-    clearValues();
-  };
-
-  const clearValues = () => {
-    var input = document.getElementsByName("answer");
-    for (let i = 0; i < input.length; i++) {
-      input[i].className = "Normal";
-      input[i].value = "";
-    }
+    clearChartValues();
   };
 
   const NeuterChartBTN = () => {
@@ -76,30 +71,25 @@ const Declensions = () => {
         <h1>Learn Latin Declensions</h1>
       </header>
       <hr/>
+      <Dropdown info={DropdownList["DeclensionFunctions"]} title="Declension Functions" />
       <h2>Declension Chart {chartCount}/{chartAmount} {extraLabel}</h2>
       <div className="Content">
         <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>
         <table className="Chart">
-          <tr>
-            <th>Form</th>
-            <th>Singular</th>
-            <th>Plural</th>
-          </tr>
+          <ChartTitle data={data["cat-names-1"]}/>
           {data["d-" + chartCount + neuterChart]?.length > 0 ? (
             <>
             {data["d-" + chartCount + neuterChart].map((info) => (
-              <Chart count={chartCount} answers={visibleAnswers} info={info}/>
+              <Chart info={info} answers={visibleAnswers}/>
             ))}
             </>
-          ) : (
-          <></>
-          )}
+          ) : (<></>)}
         </table>
         <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
         <NeuterChartBTN />
-        <button className="Chart-Option" onClick={() => clearValues()}>Clear Answers</button>
+        <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
         <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
       </div>
     </div>

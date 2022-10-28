@@ -14,6 +14,8 @@
 <pre>
 - Declension charts 1-5
 - Declension charts 1-5 answers
+- Declension functions chart
+- Declension functions
 - Future tense charts 1-2
 - Personal endings chart
 - Present tense 
@@ -24,6 +26,9 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Change formating of translation to allow for centered text
+- Fill in missing data
+- Popup examples for charts
+- Make text in nav places be in center verticaly
+- Make react happy
 - Fix a lot of bad code
 </pre>

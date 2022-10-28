@@ -2,7 +2,9 @@ import { useState } from "react";
 import Chart from "../components/Chart";
 import Dropdown from "../components/Dropdown";
 import DropdownList from "../data/DropdownLists.json";
+import ChartTitle from "../components/ChartTitle";
 import data from "../data/PersonalEndingsChart.json";
+import { clearChartValues } from "../Funtions";
 
 const PersonalEndings = () => {
   const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
@@ -18,7 +20,7 @@ const PersonalEndings = () => {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
     }
-    clearValues();
+    clearChartValues();
   };
 
   const toggleMeaningChart = () => {
@@ -29,15 +31,7 @@ const PersonalEndings = () => {
       setMeaningChart("");
       setExtraLabel("");
     }
-    clearValues();
-  };
-
-  const clearValues = () => {
-    var input = document.getElementsByName("answer");
-    for (let i = 0; i < input.length; i++) {
-      input[i].className = "Normal";
-      input[i].value = "";
-    }
+    clearChartValues();
   };
 
   return (
@@ -47,57 +41,24 @@ const PersonalEndings = () => {
       </header>
       <hr />
       <h2>Personal Endings Chart {extraLabel}</h2>
-      <details className="Dropdown">
-      <summary>Identify Verb Conjugations</summary>
-      {DropdownList["IDVC"]?.length > 0 ? (
-        <div className="container">
-          {DropdownList["IDVC"].map((IDVC) => (
-            <Dropdown info={IDVC} />
-          ))}
-        </div>
-      ) : (<></>)}
-      </details>
-      <details className="Dropdown">
-      <summary>Present Tense</summary>
-      {DropdownList["p"]?.length > 0 ? (
-        <div className="container">
-          {DropdownList["p"].map((p) => (
-            <Dropdown info={p} />
-          ))}
-        </div>
-      ) : (<></>)}
-      </details>
-      <details className="Dropdown">
-      <summary>Imperfect Tense</summary>
-      {DropdownList["i"]?.length > 0 ? (
-        <div className="container">
-          {DropdownList["i"].map((i) => (
-            <Dropdown info={i} />
-          ))}
-        </div>
-      ) : (<></>)}
-      </details>
+      <Dropdown info={DropdownList["IDVC"]} title="Identify Verb Conjugations" />
+      <Dropdown info={DropdownList["p"]} title="Present Tense" />
+      <Dropdown info={DropdownList["i"]} title="Imperfect Tense" />
       <div className="Content">
         <table className="Chart">
-          <tr>
-            <th>Form</th>
-            <th>Singular</th>
-            <th>Plural</th>
-          </tr>
+          <ChartTitle data={data["cat-names-1"]}/>
           {data["p-1" + meaningChart]?.length > 0 ? (
             <>
             {data["p-1"+ meaningChart].map((info) => (
-              <Chart count={1} answers={visibleAnswers} info={info}/>
+              <Chart info={info} answers={visibleAnswers}/>
             ))}
             </>
-          ) : (
-          <></>
-          )}
+          ) : (<></>)}
         </table>
       </div>
       <div className="Options">
         <button className="Chart-Option" onClick={() => toggleMeaningChart()}>Meaning Chart</button>
-        <button className="Chart-Option" onClick={() => clearValues()}>Clear Answers</button>
+        <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
         <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
       </div>
     </div>

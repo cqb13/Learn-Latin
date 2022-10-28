@@ -1,5 +1,14 @@
 {
   "chart-count": 5,
+  "cat-names-1": [
+    ["Form"],
+    ["Singular"],
+    ["Plural"]
+  ],
+  "cat-names-2": [
+    ["Form"],
+    ["Function"]
+  ],
   "d-1": [
     ["Nominative", "a", "ae"],
     ["Genative", "ae", "arum"],
@@ -48,5 +57,12 @@
     ["Dative", "ei", "ebus"],
     ["Accusative", "em", "es"],
     ["Ablative", "e", "ebus"]
+  ],
+  "Functions": [
+    ["Nominative", "subject"],
+    ["Genative", "possession"],
+    ["Dative", "indirect object"],
+    ["Accusative", "direct object"],
+    ["Ablative", "by/with/from"]
   ]
 }

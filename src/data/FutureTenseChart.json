@@ -2,6 +2,11 @@
   "chart-count": 2,
   "action-1": "For 1st & 2nd conjugation verbs: Drop \"re\" of 2nd principal part/infinitive ➡ Add chart ending",
   "action-2": "For 3rd, 3rd-io, and 4th conjugation verbs: Drop \"o\" of 1st principal part/infinitive ➡ Add chart ending",
+  "cat-names-1": [
+    ["Form"],
+    ["Singular"],
+    ["Plural"]
+  ],
   "f-1": [
     ["1st", "bo", "bimus"],
     ["2nd", "bis", "bitis"],

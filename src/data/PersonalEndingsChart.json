@@ -1,4 +1,9 @@
 {
+  "cat-names-1": [
+    ["Form"],
+    ["Singular"],
+    ["Plural"]
+  ],
   "p-1": [
     ["1st", ["o", "m"], "mus"],
     ["2nd", "s", "tis"],

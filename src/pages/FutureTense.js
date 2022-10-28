@@ -2,7 +2,9 @@ import { useState } from "react";
 import data from "../data/FutureTenseChart.json";
 import Chart from "../components/Chart";
 import Dropdown from "../components/Dropdown";
+import ChartTitle from "../components/ChartTitle";
 import DropdownList from "../data/DropdownLists.json";
+import { clearChartValues } from "../Funtions";
 
 const FutureTense = () => {
   const [chartCount, setChartCount] = useState(1);
@@ -23,7 +25,7 @@ const FutureTense = () => {
         setChartCount(chartAmount);
       }
     }
-    clearValues();
+    clearChartValues();
   };
 
   const toggleAnswers = () => {
@@ -34,15 +36,7 @@ const FutureTense = () => {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
     }
-    clearValues();
-  };
-
-  const clearValues = () => {
-    var input = document.getElementsByName("answer");
-    for (let i = 0; i < input.length; i++) {
-      input[i].className = "Normal";
-      input[i].value = "";
-    }
+    clearChartValues();
   };
 
   return (
@@ -52,39 +46,24 @@ const FutureTense = () => {
       </header>
       <hr/>
       <h2>Future Tense Chart {chartCount}/{chartAmount}</h2>
-      <details className="Dropdown">
-      <summary>Identify Verb Conjugations</summary>
-      {DropdownList["IDVC"]?.length > 0 ? (
-        <div className="container">
-          {DropdownList["IDVC"].map((IDVC) => (
-            <Dropdown info={IDVC} />
-          ))}
-        </div>
-      ) : (<></>)}
-      </details>
+      <Dropdown info={DropdownList["IDVC"]} title="Identify Verb Conjugations" />
       <h3>{data["action-" + chartCount]}</h3>
       <div className="Content">
         <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>
         <table className="Chart">
-          <tr>
-            <th>Form</th>
-            <th>Singular</th>
-            <th>Plural</th>
-          </tr>
+          <ChartTitle data={data["cat-names-1"]}/>
           {data["f-" + chartCount]?.length > 0 ? (
             <>
             {data["f-" + chartCount].map((info) => (
-              <Chart count={chartCount} answers={visibleAnswers} info={info}/>
+              <Chart info={info} answers={visibleAnswers}/>
             ))}
             </>
-          ) : (
-          <></>
-          )}
+          ) : (<></>)}
         </table>
         <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
-        <button className="Chart-Option" onClick={() => clearValues()}>Clear Answers</button>
+        <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
         <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
       </div>
     </div>

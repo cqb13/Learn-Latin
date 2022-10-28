@@ -39,5 +39,12 @@
     ["3rd Conjugation: o, ere [Ex: duco, ducere]"],
     ["3rd-io Conjugation: io, ere [Ex: capio, capere]"],
     ["4th Conjugation: io, ire [Ex: audio, audire]"]
+  ],
+  "DeclensionFunctions": [
+    ["The/a ____ (subject)"],
+    ["Of the/a ____ (possession)"],
+    ["To/for the/a ____ (indirect object)"],
+    ["The/a ____ (direct object)"],
+    ["By/with/from/in the/a ____"]
   ]
 }

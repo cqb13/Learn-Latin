@@ -86,6 +86,10 @@ input[type="text"]:focus {
   }
   .Chart-Option {
     margin-top: 0px;
+    width: 80%;
+  }
+  .Options {
+    flex-direction: column;
   }
   .Switch-Chart {
     margin-bottom: 0px;

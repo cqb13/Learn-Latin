@@ -1,19 +1,17 @@
-//???: this runs 2 times, not sure why
 const Chart = (info) => {
-  var singularAnswer;
-  var pluralAnswer;
-  var readOnly = false;
+  var input = document.getElementsByName("user-input");
+  var useable = [];
+  var RowValue;
+
+  //removes first item from data array leaving answers
+  for (let i = 1; i < info.info.length; i++) {
+    useable.push(info.info[i])
+  }
 
   if (info.answers === true) {
-    var input = document.getElementsByName("answer");
     for (let i = 0; i < input.length; i++) {
       input[i].className = "Right";
     }
-    readOnly = true
-    singularAnswer = info.info[1]
-    pluralAnswer = info.info[2]
-  } else {
-    readOnly = false
   }
 
   const handleChange = (event) => {
@@ -41,15 +39,34 @@ const Chart = (info) => {
     }
   }
 
+  const Row = (data) => {
+    if (info.answers === true) {
+      RowValue = (
+        <input type="text" value={data.data} className="Right" readOnly/>
+      );
+    } else {
+      RowValue = (
+        <input type="text" placeholder="Enter Declension" id={data.data} className="Normal" onChange={handleChange} name="user-input"/>
+      );
+    }
+
+    return (
+      <td>
+       {RowValue}
+      </td>
+    )
+  }
+
   return (
     <tr>
       <td className="Side-Label">{info.info[0]}</td>
-      <td>
-        <input value={singularAnswer} type="text" placeholder="Enter Declension" id={info.info[1]} className="Normal" onChange={handleChange} name="answer" readOnly={readOnly}/>
-      </td>
-      <td>
-        <input value={pluralAnswer} type="text" placeholder="Enter Declension" id={info.info[2]} className="Normal" onChange={handleChange} name="answer" readOnly={readOnly}/>
-      </td>
+      {useable?.length > 0 ? (
+        <>
+          {useable.map((data) => (
+            <Row data={data}/>
+          ))}
+        </>
+      ) : (<></>)}
     </tr>
   );
 };

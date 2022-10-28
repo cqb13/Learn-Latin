@@ -11,6 +11,7 @@ import Resources from "./pages/Resources";
 import Declensions from "./pages/Declensions";
 import FutureTense from "./pages/FutureTense";
 import PersonalEndings from "./pages/PersonalEndings";
+import DeclensionFunctions from "./pages/DeclensionFunctions";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Charts/Declensions" element={<Declensions />} />
         <Route path="/Charts/Future-Tense" element={<FutureTense />} />
         <Route path="/Charts/Personal-Endings" element={<PersonalEndings />} />
+        <Route path="/Charts/Declension-Funtions" element={<DeclensionFunctions />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
