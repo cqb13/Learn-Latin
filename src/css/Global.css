@@ -99,7 +99,7 @@ button:active {
   display: none;
 }
 
-chartnav {
+.Flex-Item-Container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +121,9 @@ chartnav {
 }
 
 .Dropdown {
-  width: 40%;
+  min-width: 20%;
+  width: fit-content;
+  max-width: 40%;
   padding: 3px;
   margin: 5px auto 5px auto;
   border: 2px solid #496bbe;

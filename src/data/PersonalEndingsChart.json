@@ -12,6 +12,6 @@
   "p-1-m": [
     ["1st", "i", "we"],
     ["2nd", "you", "you all"],
-    ["1st", ["he", "she", "it"], "they"]
+    ["3rd", ["he", "she", "it"], "they"]
   ]
 }

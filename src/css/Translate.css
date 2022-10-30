@@ -32,6 +32,7 @@
 
 .Translation-Display {
   width: fit-content;
+  font-family: inherit;
   margin: auto auto auto auto;
 }
 

@@ -26,6 +26,7 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
+- Organize pages better / make more consitant (drop down list location / headings)
 - Fill in missing data
 - Popup examples for charts
 - Make text in nav places be in center verticaly
