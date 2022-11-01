@@ -21,15 +21,13 @@
 - Present tense 
 - Imperfect Tense
 - Verb conjugation endings 1-5
-- Word translation (uses whitakers words)
+- Word translation (whitakers words & google)
 - Resources for learning Latin
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Organize pages better / make more consitant (drop down list location / headings)
+- Make nav bar for dropdowns at top of screen that make popup dragable windows open with info
 - Fill in missing data
-- Popup examples for charts
-- Make text in nav places be in center verticaly
 - Make react happy
 - Fix a lot of bad code
 </pre>

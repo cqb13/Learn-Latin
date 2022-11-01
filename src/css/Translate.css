@@ -1,8 +1,22 @@
+/*TODO: fix mobile css*/
+.Title {
+  margin-bottom: 0px;
+}
+
 .Search {
-  width: 80%;
+  width: 70%;
   font-size: 25px;
   outline-color: #496bbe;
   padding: 5px;
+}
+
+.Mode-Btn {
+  width: 20%;
+  margin: 10px;
+  padding: 5px;
+  font-size: 25px;
+  border: none;
+  outline: 2px solid #496bbe;
 }
 
 .Search-Options {
