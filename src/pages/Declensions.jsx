@@ -1,10 +1,9 @@
 import { useState } from "react";
+import { clearChartValues } from "../Funtions";
 import data from "../data/DeclensionCharts.json";
-import Dropdown from "../components/Dropdown";
-import DropdownList from "../data/DropdownLists.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
-import { clearChartValues } from "../Funtions";
+import Popup from "../components/Popup";
 
 const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);
@@ -67,11 +66,16 @@ const Declensions = () => {
 
   return (
     <div>
+      <div className="Row-Nav-Container">
+        <Popup popup={"present-tense"}/>
+        <Popup popup={"imperfect-tense"}/>
+        <Popup popup={"identify-verb-conjugations"}/>
+        <Popup popup={"declension-functions"}/>
+      </div>
       <header className="Header">
         <h1>Learn Latin Declensions</h1>
       </header>
       <hr/>
-      <Dropdown info={DropdownList["DeclensionFunctions"]} title="Declension Functions" />
       <h2>Declension Chart {chartCount}/{chartAmount} {extraLabel}</h2>
       <div className="Content">
         <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>

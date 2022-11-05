@@ -1,10 +1,9 @@
 import { useState } from "react";
 import data from "../data/DeclensionCharts.json";
-import Dropdown from "../components/Dropdown";
-import DropdownList from "../data/DropdownLists.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import { clearChartValues } from "../Funtions";
+import Popup from "../components/Popup";
 
 const DeclensionFunctions = () => {
   const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
@@ -21,12 +20,18 @@ const DeclensionFunctions = () => {
   };
   
   return (
+    
     <div>
+      <div className="Row-Nav-Container">
+        <Popup popup={"present-tense"}/>
+        <Popup popup={"imperfect-tense"}/>
+        <Popup popup={"identify-verb-conjugations"}/>
+        <Popup popup={"declension-functions"}/>
+      </div>
       <header className="Header">
         <h1>Learn Latin Declensions</h1>
       </header>
       <hr/>
-      <Dropdown info={DropdownList["DeclensionFunctions"]} title="Declension Functions" />
       <h2>Declension Funtions</h2>
       <div className="Content">
         <table className="Chart">

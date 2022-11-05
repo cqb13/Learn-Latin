@@ -1,0 +1,62 @@
+{
+  "present-tense": {
+    "name": "Present Tense",
+    "data": [
+      [
+        "1st Conjugation: Drop \"re\" of 2nd part/infinitive ➡ Add personal ending (1st singular ending is \"o\" not \"ao\")"
+      ],
+      [
+        "2nd Conjugation: Drop \"re\" of 2nd part/infinitive ➡ Add personal ending"
+      ],
+      [
+        "3rd Conjugation: Drop \"o\" of 1st principal part ➡ Add \"o\", \"is\", \"it\", \"imus\", \"itis\", \"unt\""
+      ],
+      [
+        "3rd-io Conjugation: Drop \"o\" of 1st principal part ➡ Add (include a \"u\" if 3rd plural) personal ending"
+      ],
+      [
+        "4th Conjugation: Drop \"o\" of 1st principal part ➡ Add (include a \"u\" if 3rd plural) personal ending"
+      ]
+    ]
+  },
+  "imperfect-tense": {
+    "name": "Imperfect Tense",
+    "data": [
+      [
+        "1st Conjugation: Drop \"re\" of 2nd part/infinitive ➡ Add \"ba\" + personal ending"
+      ],
+      [
+        "2nd Conjugation: Drop \"re\" of 2nd part/infinitive ➡ Add \"ba\" + personal ending"
+      ],
+      [
+        "3rd Conjugation: Drop \"o\" of 1st principal part ➡ Add \"eba\" + personal ending"
+      ],
+      [
+        "3rd-io Conjugation: Drop \"o\" of 1st principal part ➡ Add \"eba\" + personal ending"
+      ],
+      [
+        "4th Conjugation: Drop \"o\" of 1st principal part ➡ Add \"eba\" + personal ending"
+      ]
+    ]
+  },
+  "identify-verb-conjugations": {
+    "name": "Identify Verb Conjugations",
+    "data": [
+      ["1st Conjugation: o, are [Ex: amo, amare]"],
+      ["2nd Conjugation: eo, ere [Ex: sedeo, sedere]"],
+      ["3rd Conjugation: o, ere [Ex: duco, ducere]"],
+      ["3rd-io Conjugation: io, ere [Ex: capio, capere]"],
+      ["4th Conjugation: io, ire [Ex: audio, audire]"]
+    ]
+  },
+  "declension-functions": {
+    "name": "Declension Functions",
+    "data": [
+      ["The/a ____ (subject)"],
+      ["Of the/a ____ (possession)"],
+      ["To/for the/a ____ (indirect object)"],
+      ["The/a ____ (direct object)"],
+      ["By/with/from/in the/a ____"]
+    ]
+  }
+}

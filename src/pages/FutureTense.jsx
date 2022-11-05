@@ -1,10 +1,9 @@
 import { useState } from "react";
 import data from "../data/FutureTenseChart.json";
 import Chart from "../components/Chart";
-import Dropdown from "../components/Dropdown";
 import ChartTitle from "../components/ChartTitle";
-import DropdownList from "../data/DropdownLists.json";
 import { clearChartValues } from "../Funtions";
+import Popup from "../components/Popup";
 
 const FutureTense = () => {
   const [chartCount, setChartCount] = useState(1);
@@ -41,11 +40,15 @@ const FutureTense = () => {
 
   return (
     <div>
+      <div className="Row-Nav-Container">
+        <Popup popup={"present-tense"}/>
+        <Popup popup={"imperfect-tense"}/>
+        <Popup popup={"identify-verb-conjugations"}/>
+      </div>
       <header className="Header">
         <h1>Learn Latin Future Tense</h1>
       </header>
       <hr/>
-      <Dropdown info={DropdownList["IDVC"]} title="Identify Verb Conjugations" />
       <h2>Future Tense Chart {chartCount}/{chartAmount}</h2>
       <h3>{data["action-" + chartCount]}</h3>
       <div className="Content">

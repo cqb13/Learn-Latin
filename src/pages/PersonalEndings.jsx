@@ -1,10 +1,9 @@
 import { useState } from "react";
 import Chart from "../components/Chart";
-import Dropdown from "../components/Dropdown";
-import DropdownList from "../data/DropdownLists.json";
 import ChartTitle from "../components/ChartTitle";
 import data from "../data/PersonalEndingsChart.json";
 import { clearChartValues } from "../Funtions";
+import Popup from "../components/Popup";
 
 const PersonalEndings = () => {
   const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
@@ -36,13 +35,15 @@ const PersonalEndings = () => {
 
   return (
     <div>
+      <div className="Row-Nav-Container">
+        <Popup popup={"present-tense"}/>
+        <Popup popup={"imperfect-tense"}/>
+        <Popup popup={"identify-verb-conjugations"}/>
+      </div>
       <header className="Header">
         <h1>Learn Latin Personal Endings</h1>
       </header>
       <hr />
-      <Dropdown info={DropdownList["IDVC"]} title="Identify Verb Conjugations" />
-      <Dropdown info={DropdownList["p"]} title="Present Tense" />
-      <Dropdown info={DropdownList["i"]} title="Imperfect Tense" />
       <h2>Personal Endings Chart {extraLabel}</h2>
       <div className="Content">
         <table className="Chart">

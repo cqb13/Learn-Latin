@@ -26,7 +26,9 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Make nav bar for dropdowns at top of screen that make popup dragable windows open with info
+- Better style for popups
+- Option to minimize popup to just title???
+- Make popup code better
 - Fill in missing data
 - Make react happy
 - Fix a lot of bad code

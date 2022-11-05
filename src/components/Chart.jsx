@@ -28,6 +28,7 @@ const Chart = (info) => {
     }
   }
 
+  //TODO remove spaces from special check
   const checkList = (value, id, event) => {
     id = id.split(",").join("");
     id = id.split("");

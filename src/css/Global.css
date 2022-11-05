@@ -34,6 +34,15 @@ nav {
   background-color: #496bbe;
 }
 
+.Row-Nav-Container {
+  display: flex;
+  padding: 5px 0px 5px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
 .Icon {
   align-self: center;
   margin: 0px 5px 0px auto;
@@ -180,4 +189,24 @@ details[open] {
     flex-direction: row;
     justify-content: left;
   }
+}
+
+.Popup-Container {
+  width: fit-content;
+  max-width: 25%;
+  border: 2px solid #496bbe;
+  border-radius: 2px;
+  background-color: rgb(245, 247, 250, 0.9);
+  padding: 20px;
+  z-Index: 1000,
+}
+
+.Popup-Title {
+  margin-top: 0px;
+}
+
+.Popup-Content {
+  width: 100%;
+  margin: auto auto auto auto;
+  word-wrap: break-word;
 }
