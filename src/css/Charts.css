@@ -40,16 +40,20 @@ input[type="text"]:focus {
   outline-color: #496bbe;
 }
 
+/*TODO: make this css not bad*/
 .Wrong {
   outline-color: red;
+  border-radius: 0px !important;
 }
 
 .Right {
   outline-color: springgreen;
+  border-radius: 0px !important;
 }
 
 .Normal {
   outline-color: #444;
+  border-radius: 0px !important;
 }
 
 .Switch-Chart {

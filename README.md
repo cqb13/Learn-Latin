@@ -26,8 +26,6 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Better style for popups
-- Option to minimize popup to just title???
 - Make popup code better
 - Fill in missing data
 - Make react happy

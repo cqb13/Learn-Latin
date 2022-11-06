@@ -55,6 +55,7 @@ nav {
   text-decoration: none;
   color: #f5f7fa;
   border: 2px solid #f5f7fa;
+  border-radius: 2px;
   transition: 500ms;
 }
 
@@ -80,12 +81,14 @@ input[type="text"] {
   font-family: inherit;
   text-align: center;
   background-color: inherit;
+  border-radius: 2px;
   border: none;
   color: #444;
 }
 
 button {
   border: 2px solid #496bbe;
+  border-radius: 2px;
   background-color: #f5f7fa;
   color: #444;
   transition: 500ms;
@@ -122,6 +125,7 @@ button:active {
   font-size: 25px;
   color: #444;
   border: 2px solid #496bbe;
+  border-radius: 2px;
   transition: 500ms;
 }
 
@@ -156,6 +160,26 @@ details[open] {
   background-color: #f5f7fa !important;
 }
 
+.Popup-Container {
+  width: fit-content;
+  max-width: 25%;
+  border: 2px solid #496bbe;
+  border-radius: 2px;
+  background-color: rgb(245, 247, 250, 0.9);
+  padding: 20px;
+  z-Index: 1000,
+}
+
+.Popup-Title {
+  margin-top: 0px;
+}
+
+.Popup-Content {
+  width: 100%;
+  margin: auto auto auto auto;
+  word-wrap: break-word;
+}
+
 @media only screen and (max-width: 300px) {
   .Switch-Page {
     width: 30%;
@@ -182,6 +206,11 @@ details[open] {
     font-size: 15px;
     margin-bottom: 0px;
   }
+  .Popup-Container {
+    width: 80%;
+    max-width: 80%;
+    z-index: 1000;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -189,24 +218,4 @@ details[open] {
     flex-direction: row;
     justify-content: left;
   }
-}
-
-.Popup-Container {
-  width: fit-content;
-  max-width: 25%;
-  border: 2px solid #496bbe;
-  border-radius: 2px;
-  background-color: rgb(245, 247, 250, 0.9);
-  padding: 20px;
-  z-Index: 1000,
-}
-
-.Popup-Title {
-  margin-top: 0px;
-}
-
-.Popup-Content {
-  width: 100%;
-  margin: auto auto auto auto;
-  word-wrap: break-word;
 }

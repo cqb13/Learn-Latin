@@ -28,6 +28,7 @@ const Chart = (info) => {
     }
   }
 
+  //??? not sure why i put this here
   //TODO remove spaces from special check
   const checkList = (value, id, event) => {
     id = id.split(",").join("");
@@ -39,6 +40,7 @@ const Chart = (info) => {
       event.target.className = "Wrong";
     }
   }
+
 
   const Row = (data) => {
     if (info.answers === true) {

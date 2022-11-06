@@ -51,8 +51,10 @@ const Translate = () => {
       </header>
       <hr/>
       <main>
-        <input type="text" placeholder="Enter a word" className="Search" value={search || ''} onChange={event => setSearch(event.target.value)}/>
-        <button className="Mode-Btn" onClick={() => switchMode()}>Switch Source</button>
+        <div className="Search-Area">
+          <input type="text" placeholder="Enter a word" className="Search" value={search || ''} onChange={event => setSearch(event.target.value)}/>
+          <button className="Mode-Btn" onClick={() => switchMode()}>Switch Source</button>
+        </div>
         <div className="Search-Options">
           <button className="Option" onClick={() => LTE(search)}>Latin to English</button>
           <button className="Option" onClick={() => ETL(search)}>English to Latin</button>

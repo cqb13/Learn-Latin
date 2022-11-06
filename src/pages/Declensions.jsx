@@ -67,9 +67,6 @@ const Declensions = () => {
   return (
     <div>
       <div className="Row-Nav-Container">
-        <Popup popup={"present-tense"}/>
-        <Popup popup={"imperfect-tense"}/>
-        <Popup popup={"identify-verb-conjugations"}/>
         <Popup popup={"declension-functions"}/>
       </div>
       <header className="Header">
