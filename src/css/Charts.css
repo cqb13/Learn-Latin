@@ -6,6 +6,7 @@
   width: 100%;
 }
 
+/*TODO: try making outer chart border rounded*/
 .Chart {
   width: 50%;
 }
@@ -40,7 +41,7 @@ input[type="text"]:focus {
   outline-color: #496bbe;
 }
 
-/*TODO: make this css not bad*/
+/*TODO: maybe dont use !important*/
 .Wrong {
   outline-color: red;
   border-radius: 0px !important;

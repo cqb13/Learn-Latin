@@ -26,8 +26,7 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Make popup code better
+- Stop popups from going to center of screen when chart is switched
 - Fill in missing data
-- Make react happy
 - Fix a lot of bad code
 </pre>

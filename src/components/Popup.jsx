@@ -16,16 +16,27 @@ const MODAL_STYLES = {
 
 const Popup = ({popup}) => {
   const [open, setOpen] = useState(false);
-  var name = data[popup]["name"]
+  const [extraTitle, setExtraTitle] = useState("Open ");
+  var name = data[popup]["name"];
 
-  const Modal = ({onClose,}) => {
+  // Close button does not work with touch screen
+  const togglePopup = () => {
+    setOpen(!open);
+    if (open) {
+      setExtraTitle("Open ");
+    } else {
+      setExtraTitle("Close ");
+    }
+  };
+
+  const Modal = ({onClose}) => {
     if (!open) return null;
   
     const PopupContent = ({content}) => {
       return (
         <p>{content}</p>
       );
-    }  
+    }
   
     return ReactDom.createPortal (
       <>
@@ -55,8 +66,8 @@ const Popup = ({popup}) => {
 
   return (
     <>
-    <button className="Popup-Bar-Btn" onClick={() => setOpen(true)}>{name}</button>
-    <Modal onClose={() => setOpen(false)}/>
+    <button className="Popup-Bar-Btn" onClick={() => togglePopup()}>{extraTitle + name}</button>
+    <Modal onClose={() => togglePopup()}/>
     <div style={BUTTON_WRAPPER_STYLES} id={popup.toString()}>
     </div>
     </>

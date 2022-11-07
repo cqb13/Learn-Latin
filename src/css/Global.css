@@ -49,6 +49,8 @@ nav {
 }
 
 .Switch-Page {
+  display: flex;
+  align-items: center;
   margin: 5px 5px 5px 10px;
   padding: 5px;
   font-size: 20px;
@@ -120,6 +122,9 @@ button:active {
 }
 
 .Sub-Selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   padding: 5px;
   font-size: 25px;
@@ -167,7 +172,7 @@ details[open] {
   border-radius: 2px;
   background-color: rgb(245, 247, 250, 0.9);
   padding: 20px;
-  z-Index: 1000,
+  z-index: 1000;
 }
 
 .Popup-Title {
