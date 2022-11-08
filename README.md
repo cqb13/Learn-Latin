@@ -26,6 +26,7 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
+- Firebase stuff...
 - Stop popups from going to center of screen when chart is switched
 - Fill in missing data
 - Fix a lot of bad code

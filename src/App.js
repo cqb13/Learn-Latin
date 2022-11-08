@@ -5,7 +5,7 @@ import "./css/Translate.css";
 import Navbar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
-import Charts from "./pages/Charts";
+import Practice from "./pages/Practice";
 import Translate from "./pages/Translate";
 import Resources from "./pages/Resources";
 import Declensions from "./pages/Declensions";
@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Charts" element={<Charts />} />
+        <Route path="/Practice" element={<Practice />} />
         <Route path="/Translate" element={<Translate />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Charts/Declensions" element={<Declensions />} />

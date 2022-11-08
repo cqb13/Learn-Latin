@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ChartNav = () => {
+const PracticeNav = () => {
   return (
     <div className="Flex-Item-Container">
       <Link to="/charts/declensions" className="Sub-Selection">Declensions</Link>
@@ -11,4 +11,4 @@ const ChartNav = () => {
   );
 };
   
-export default ChartNav;
+export default PracticeNav;
