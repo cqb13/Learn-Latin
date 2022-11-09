@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
-import data from "../data/PersonalEndingsChart.json";
+import data from "../data/PersonalEndingsData.json";
 import { clearChartValues } from "../Funtions";
 import Popup from "../components/Popup";
 
@@ -41,7 +41,7 @@ const PersonalEndings = () => {
         <Popup popup={"identify-verb-conjugations"}/>
       </div>
       <header className="Header">
-        <h1>Learn Latin Personal Endings</h1>
+        <h1>Personal Endings</h1>
       </header>
       <hr />
       <h2>Personal Endings Chart {extraLabel}</h2>

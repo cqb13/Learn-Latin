@@ -11,6 +11,7 @@ import Resources from "./pages/Resources";
 import Declensions from "./pages/Declensions";
 import FutureTense from "./pages/FutureTense";
 import PersonalEndings from "./pages/PersonalEndings";
+import PersonalPronouns from "./pages/PersonalPronouns";
 import DeclensionFunctions from "./pages/DeclensionFunctions";
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
         <Route path="/Practice" element={<Practice />} />
         <Route path="/Translate" element={<Translate />} />
         <Route path="/Resources" element={<Resources />} />
-        <Route path="/Charts/Declensions" element={<Declensions />} />
-        <Route path="/Charts/Future-Tense" element={<FutureTense />} />
-        <Route path="/Charts/Personal-Endings" element={<PersonalEndings />} />
-        <Route path="/Charts/Declension-Funtions" element={<DeclensionFunctions />} />
+        <Route path="/Practice/Declensions" element={<Declensions />} />
+        <Route path="/Practice/Future-Tense" element={<FutureTense />} />
+        <Route path="/Practice/Personal-Endings" element={<PersonalEndings />} />
+        <Route path="/Practice/Personal-Pronouns" element={<PersonalPronouns />} />
+        <Route path="/Practice/Declension-Funtions" element={<DeclensionFunctions />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>

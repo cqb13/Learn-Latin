@@ -8,7 +8,7 @@ const Practice = () => {
       </header>
       <hr />
       <main>
-        <h2>Latin Chart</h2>
+        <h2>Latin Charts</h2>
         <PracticeNav />
       </main>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { clearChartValues } from "../Funtions";
-import data from "../data/DeclensionCharts.json";
+import data from "../data/DeclensionData.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import Popup from "../components/Popup";
@@ -70,7 +70,7 @@ const Declensions = () => {
         <Popup popup={"declension-functions"}/>
       </div>
       <header className="Header">
-        <h1>Learn Latin Declensions</h1>
+        <h1>Declensions Endings</h1>
       </header>
       <hr/>
       <h2>Declension Chart {chartCount}/{chartAmount} {extraLabel}</h2>

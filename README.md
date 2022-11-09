@@ -18,6 +18,9 @@
 - Declension functions
 - Future tense charts 1-2
 - Personal endings chart
+- Personal endings chart Meanings
+- Personal Pronouns chart
+- Personal Pronouns chart meanings
 - Present tense 
 - Imperfect Tense
 - Verb conjugation endings 1-5
@@ -26,8 +29,10 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Firebase stuff...
+- Use Functions.js
+- Mobile css for large charts
 - Stop popups from going to center of screen when chart is switched
+- Firebase stuff...
 - Fill in missing data
 - Fix a lot of bad code
 </pre>

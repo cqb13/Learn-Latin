@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "../data/DeclensionCharts.json";
+import data from "../data/DeclensionData.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import { clearChartValues } from "../Funtions";
@@ -26,7 +26,7 @@ const DeclensionFunctions = () => {
         <Popup popup={"declension-functions"}/>
       </div>
       <header className="Header">
-        <h1>Learn Latin Declensions</h1>
+        <h1>Declensions Funtions</h1>
       </header>
       <hr/>
       <h2>Declension Funtions</h2>

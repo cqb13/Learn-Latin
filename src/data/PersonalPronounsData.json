@@ -1,0 +1,74 @@
+{
+    "chart-count": 3,
+    "cat-names-1": [
+      ["Form"],
+      ["Singular"],
+      ["Plural"]
+    ],
+    "cat-names-2": [
+      ["Form"],
+      ["Masculine"],
+      ["Feminine"],
+      ["Neuter"]
+    ],
+    "action-1": "I, of me",
+    "action-2": "you, of you",
+    "action-3": "he/she/it",
+    "pp-1": [
+      ["Nominative", "ego", "nos"],
+      ["Genative", "mei", ["nostrum","nostri"]],
+      ["Dative", "mihi", "nobis"],
+      ["Accusative", "me", "nos"],
+      ["Ablative", "me", "nobis"]
+    ],
+    "pp-1-m": [
+      ["Nominative", "I", "we"],
+      ["Genative", "of me", "of us"],
+      ["Dative", "to/for me", "to/for us"],
+      ["Accusative", "me", "us"],
+      ["Ablative", "in/at/by/with/from me", "in/at/by/with/from us"]
+    ],
+    "pp-2": [
+      ["Nominative", "tu", "vos"],
+      ["Genative", "tui", ["vestrum", "vestri"]],
+      ["Dative", "tibi", "vobis"],
+      ["Accusative", "te", "vos"],
+      ["Ablative", "te", "vobis"]
+    ],
+    "pp-2-m": [
+      ["Nominative", "you", "you"],
+      ["Genative", "of you", "of you"],
+      ["Dative", "to/for you", "to/for you"],
+      ["Accusative", "you", "you"],
+      ["Ablative", "in/at/by/with/from you", "in/at/by/with/from you"]
+    ],
+    "pp-3-s": [
+      ["Nominative", "is", "ea", "id"],
+      ["Genative", "eius", "eius", "eius"],
+      ["Dative", "ei", "ei", "ei"],
+      ["Accusative", "eum", "eam", "id"],
+      ["Ablative", "eo", "eam", "eo"]
+    ],
+    "pp-3-s-m": [
+      ["Nominative", "he", "she", "it"],
+      ["Genative", "of him", "of her", "of it"],
+      ["Dative", "to/for him", "to/for her", "to/for it"],
+      ["Accusative", "him", "her", "it"],
+      ["Ablative", "in/at/by/with/from him", "in/at/by/with/from her", "in/at/by/with/from it"]
+    ],
+    "pp-3-p": [
+      ["Nominative", "ei", "eae", "ea"],
+      ["Genative", "eorum", "earum", "eorum"],
+      ["Dative", "eis", "eis", "eis"],
+      ["Accusative", "eos", "eas", "ea"],
+      ["Ablative", "eis", "eis", "eis"]
+    ],
+    "pp-3-p-m": [
+      ["Nominative", "they", "they", "they"],
+      ["Genative", "of them", "of them", "of them"],
+      ["Dative", "to/for them", "to/for them", "to/for them"],
+      ["Accusative", "them", "them", "them"],
+      ["Ablative", "to/for them", "to/for them", "to/for them"]
+    ]
+  }
+  

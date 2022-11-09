@@ -1,16 +1,22 @@
 import { useState } from "react";
-import data from "../data/FutureTenseData.json";
+import { clearChartValues, endings } from "../Funtions";
+import data from "../data/PersonalPronounsData.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
-import { clearChartValues } from "../Funtions";
 import Popup from "../components/Popup";
 
-const FutureTense = () => {
+const PersonalPronouns = () => {
   const [chartCount, setChartCount] = useState(1);
   const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
   const [visibleAnswers, setVisibleAnswers] = useState(false);
+  const [catName, setCatName] = useState("cat-names-1");
+  const [type, setType] = useState("");
+  const [meaningChart, setMeaningChart] = useState("");
+  const [extraLabel, setExtraLabel] = useState("");
+  const [otherExtraLabel, setOtherExtraLabel] = useState("");
   const chartAmount = data["chart-count"];
   var count = chartCount;
+  var btn;
 
   const swtichChart = (count, move) => {
     if (move === "right") {
@@ -24,6 +30,17 @@ const FutureTense = () => {
         setChartCount(chartAmount);
       }
     }
+
+    //for 3rd person chart
+    if (count === 3) {
+      setCatName("cat-names-2");
+      setExtraLabel("Singular");
+      setType("-s");
+    } else {
+      setCatName("cat-names-1");
+      setExtraLabel("");
+      setType("");
+    }
     clearChartValues();
   };
 
@@ -35,29 +52,58 @@ const FutureTense = () => {
       setAnswerBtnName("Hide Answers");
       setVisibleAnswers(true);
     }
+  };
+
+  const switchType = () => {
+    if (type === "-s") {
+      setType("-p");
+      setExtraLabel("Plural");
+    } else {
+      setType("-s");
+      setExtraLabel("Singular");
+    }
     clearChartValues();
+  };
+
+  const toggleMeaningChart = () => {
+    if (meaningChart === "") {
+      setMeaningChart("-m");
+      setOtherExtraLabel("Meanings");
+    } else {
+      setMeaningChart("");
+      setOtherExtraLabel("");
+    }
+    clearChartValues();
+  };
+
+  const PluralChartBTN = () => {
+    if (chartCount === 3) {
+      btn = (
+        <button className="Chart-Option" onClick={() => switchType()}>Switch Type</button>
+      );
+    } else {
+      btn = "";
+    }
+    return <>{btn}</>;
   };
 
   return (
     <div>
       <div className="Row-Nav-Container">
-        <Popup popup={"present-tense"}/>
-        <Popup popup={"imperfect-tense"}/>
-        <Popup popup={"identify-verb-conjugations"}/>
+        <Popup popup={"declension-functions"}/>
       </div>
       <header className="Header">
-        <h1>Future Tense</h1>
+        <h1>Personal Pronouns</h1>
       </header>
       <hr/>
-      <h2>Future Tense Chart {chartCount}/{chartAmount}</h2>
-      <h3>{data["action-" + chartCount]}</h3>
+      <h2>{endings[chartCount]} Person {extraLabel} {otherExtraLabel}</h2>
       <div className="Content">
         <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>
         <table className="Chart">
-          <ChartTitle data={data["cat-names-1"]}/>
-          {data["f-" + chartCount]?.length > 0 ? (
+          <ChartTitle data={data[catName]}/>
+          {data["pp-" + chartCount + type + meaningChart]?.length > 0 ? (
             <>
-            {data["f-" + chartCount].map((info) => (
+            {data["pp-" + chartCount + type + meaningChart].map((info) => (
               <Chart info={info} answers={visibleAnswers}/>
             ))}
             </>
@@ -66,6 +112,8 @@ const FutureTense = () => {
         <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
+        <PluralChartBTN/>
+        <button className="Chart-Option" onClick={() => toggleMeaningChart()}>Toggle Meanings</button>
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
         <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
       </div>
@@ -73,4 +121,4 @@ const FutureTense = () => {
   );
 };
 
-export default FutureTense;
+export default PersonalPronouns;
