@@ -47,7 +47,7 @@
       ["Genative", "eius", "eius", "eius"],
       ["Dative", "ei", "ei", "ei"],
       ["Accusative", "eum", "eam", "id"],
-      ["Ablative", "eo", "eam", "eo"]
+      ["Ablative", "eo", "ea", "eo"]
     ],
     "pp-3-s-m": [
       ["Nominative", "he", "she", "it"],

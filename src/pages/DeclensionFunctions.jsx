@@ -1,26 +1,14 @@
-import { useState } from "react";
 import data from "../data/DeclensionData.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import { clearChartValues } from "../Funtions";
 import Popup from "../components/Popup";
+import useAnswers from "../components/toggleChartAnswerBtn";
 
 const DeclensionFunctions = () => {
-  const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
-  const [visibleAnswers, setVisibleAnswers] = useState(false);
-
-  const toggleAnswers = () => {
-    if (answerBtnName === "Hide Answers") {
-      setAnswerBtnName("Show Answers");
-      setVisibleAnswers(false);
-    } else {
-      setAnswerBtnName("Hide Answers");
-      setVisibleAnswers(true);
-    }
-  };
+  const {answerToggle, visibleAnswers} = useAnswers();
   
   return (
-    
     <div>
       <div className="Row-Nav-Container">
         <Popup popup={"declension-functions"}/>
@@ -44,7 +32,7 @@ const DeclensionFunctions = () => {
       </div>
       <div className="Options">
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
+        {answerToggle}
       </div>
     </div>
   );

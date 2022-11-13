@@ -4,11 +4,11 @@ import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import { clearChartValues } from "../Funtions";
 import Popup from "../components/Popup";
+import useAnswers from "../components/toggleChartAnswerBtn";
 
 const FutureTense = () => {
   const [chartCount, setChartCount] = useState(1);
-  const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
-  const [visibleAnswers, setVisibleAnswers] = useState(false);
+  const {answerToggle, visibleAnswers} = useAnswers();
   const chartAmount = data["chart-count"];
   var count = chartCount;
 
@@ -24,18 +24,6 @@ const FutureTense = () => {
         setChartCount(chartAmount);
       }
     }
-    clearChartValues();
-  };
-
-  const toggleAnswers = () => {
-    if (answerBtnName === "Hide Answers") {
-      setAnswerBtnName("Show Answers");
-      setVisibleAnswers(false);
-    } else {
-      setAnswerBtnName("Hide Answers");
-      setVisibleAnswers(true);
-    }
-    clearChartValues();
   };
 
   return (
@@ -67,7 +55,7 @@ const FutureTense = () => {
       </div>
       <div className="Options">
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
+        {answerToggle}
       </div>
     </div>
   );

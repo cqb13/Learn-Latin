@@ -4,13 +4,13 @@ import data from "../data/DeclensionData.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import Popup from "../components/Popup";
+import useAnswers from "../components/toggleChartAnswerBtn";
 
 const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);
-  const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
-  const [visibleAnswers, setVisibleAnswers] = useState(false);
   const [neuterChart, setNeuterChart] = useState("");
   const [extraLabel, setExtraLabel] = useState("");
+  const {answerToggle, visibleAnswers} = useAnswers();
   const chartAmount = data["chart-count"];
   var count = chartCount;
   var btn;
@@ -29,17 +29,6 @@ const Declensions = () => {
     }
     setNeuterChart("");
     setExtraLabel("");
-    clearChartValues();
-  };
-
-  const toggleAnswers = () => {
-    if (answerBtnName === "Hide Answers") {
-      setAnswerBtnName("Show Answers");
-      setVisibleAnswers(false);
-    } else {
-      setAnswerBtnName("Hide Answers");
-      setVisibleAnswers(true);
-    }
   };
 
   const toggleNeuterChart = () => {
@@ -50,7 +39,6 @@ const Declensions = () => {
       setNeuterChart("");
       setExtraLabel("");
     }
-    clearChartValues();
   };
 
   const NeuterChartBTN = () => {
@@ -91,7 +79,7 @@ const Declensions = () => {
       <div className="Options">
         <NeuterChartBTN />
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
+        {answerToggle}
       </div>
     </div>
   );

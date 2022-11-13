@@ -29,7 +29,6 @@
 </pre>
 <h2>TODO:</h2>
 <pre>
-- Use Functions.js
 - Mobile css for large charts
 - Stop popups from going to center of screen when chart is switched
 - Firebase stuff...

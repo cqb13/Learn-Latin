@@ -24,6 +24,8 @@ const Home = () => {
           <Link name={"Latin Quizer"} description={"Tests you on verbs nouns and adjectives."} link={"https://www.viperfish.net/latinQuizer/"}/>
           <Link name={"Latin Helper"} description={"Translates Latin words."} link={"http://www.latinhelper.com/"}/>
           <Link name={"Latin Text Scanner"} description={"Scans latin text and gives information on words."} link={"http://www.u.arizona.edu/~aversa/latin/"}/>
+          <Link name={"Word Analysis"} description={"A morphological analysis of inflected Latin words."} link={"http://www.perseus.tufts.edu/hopper/morph?amp;lang=la&lookup="}/>
+          <Link name={"Verb Conjugator"} description={"Conjugates verbs for you."} link={"https://www.verbix.com/languages/latin"}/>
         </div>
       </main>
     </div>

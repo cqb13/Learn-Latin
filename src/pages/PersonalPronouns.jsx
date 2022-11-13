@@ -4,11 +4,11 @@ import data from "../data/PersonalPronounsData.json";
 import Chart from "../components/Chart";
 import ChartTitle from "../components/ChartTitle";
 import Popup from "../components/Popup";
+import useAnswers from "../components/toggleChartAnswerBtn";
 
 const PersonalPronouns = () => {
   const [chartCount, setChartCount] = useState(1);
-  const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
-  const [visibleAnswers, setVisibleAnswers] = useState(false);
+  const {answerToggle, visibleAnswers} = useAnswers();
   const [catName, setCatName] = useState("cat-names-1");
   const [type, setType] = useState("");
   const [meaningChart, setMeaningChart] = useState("");
@@ -30,9 +30,7 @@ const PersonalPronouns = () => {
         setChartCount(chartAmount);
       }
     }
-
-    //for 3rd person chart
-    if (count === 3) {
+    if (count === 0 || count === 3) {
       setCatName("cat-names-2");
       setExtraLabel("Singular");
       setType("-s");
@@ -40,17 +38,6 @@ const PersonalPronouns = () => {
       setCatName("cat-names-1");
       setExtraLabel("");
       setType("");
-    }
-    clearChartValues();
-  };
-
-  const toggleAnswers = () => {
-    if (answerBtnName === "Hide Answers") {
-      setAnswerBtnName("Show Answers");
-      setVisibleAnswers(false);
-    } else {
-      setAnswerBtnName("Hide Answers");
-      setVisibleAnswers(true);
     }
   };
 
@@ -62,7 +49,6 @@ const PersonalPronouns = () => {
       setType("-s");
       setExtraLabel("Singular");
     }
-    clearChartValues();
   };
 
   const toggleMeaningChart = () => {
@@ -73,7 +59,6 @@ const PersonalPronouns = () => {
       setMeaningChart("");
       setOtherExtraLabel("");
     }
-    clearChartValues();
   };
 
   const PluralChartBTN = () => {
@@ -115,7 +100,7 @@ const PersonalPronouns = () => {
         <PluralChartBTN/>
         <button className="Chart-Option" onClick={() => toggleMeaningChart()}>Toggle Meanings</button>
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
+        {answerToggle}
       </div>
     </div>
   );

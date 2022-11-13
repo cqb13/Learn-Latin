@@ -4,23 +4,12 @@ import ChartTitle from "../components/ChartTitle";
 import data from "../data/PersonalEndingsData.json";
 import { clearChartValues } from "../Funtions";
 import Popup from "../components/Popup";
+import useAnswers from "../components/toggleChartAnswerBtn";
 
 const PersonalEndings = () => {
-  const [answerBtnName, setAnswerBtnName] = useState("Show Answers");
-  const [visibleAnswers, setVisibleAnswers] = useState(false);
+  const {answerToggle, visibleAnswers} = useAnswers();
   const [meaningChart, setMeaningChart] = useState("");
   const [extraLabel, setExtraLabel] = useState("");
-
-  const toggleAnswers = () => {
-    if (answerBtnName === "Hide Answers") {
-      setAnswerBtnName("Show Answers");
-      setVisibleAnswers(false);
-    } else {
-      setAnswerBtnName("Hide Answers");
-      setVisibleAnswers(true);
-    }
-    clearChartValues();
-  };
 
   const toggleMeaningChart = () => {
     if (meaningChart === "") {
@@ -30,7 +19,6 @@ const PersonalEndings = () => {
       setMeaningChart("");
       setExtraLabel("");
     }
-    clearChartValues();
   };
 
   return (
@@ -60,7 +48,7 @@ const PersonalEndings = () => {
       <div className="Options">
         <button className="Chart-Option" onClick={() => toggleMeaningChart()}>Meaning Chart</button>
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
-        <button className="Chart-Option" onClick={() => toggleAnswers()}>{answerBtnName}</button>
+        {answerToggle}
       </div>
     </div>
   );

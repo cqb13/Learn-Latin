@@ -68,10 +68,11 @@ input[type="text"]:focus {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 10px;
+  gap: 10px;
 }
 
 .Chart-Option {
-  margin: 10px;
   width: 20%;
   font-size: 25px;
 }
