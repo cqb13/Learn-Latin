@@ -4,7 +4,7 @@
   <h1>Learn Latin Declensions</a></h1>
   <p>A website with many resources to help you learn Latin!</p>
 
-[Start learning now!](https://learn-latin.ml/)
+[Start learning now!](https://learninglatin.net/)
 
 </div>
 
