@@ -18,6 +18,7 @@
     "predeploy": "npm run build",
     "git-deploy": "gh-pages -d build",
     "deploy": "firebase deploy",
+    "test-deploy": "firebase hosting:channel:deploy learn-latin-test",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

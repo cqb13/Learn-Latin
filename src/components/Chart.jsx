@@ -27,18 +27,26 @@ const Chart = ({info, answers}) => {
       event.target.className = "Wrong";
     }
   }
-
-  //TODO: for words there needs to be a way to check the spelling of the word
-  //!!! words will be marked right bc all chars are correct but the word is wrong
-  //TODO: remove all none letter chars from input
-  //TODO: fuck around a lot with this thing to fix it
+  
   const checkList = (value, id, event) => {
-    id = id.split(",").join("");
+    var right = 0;
+    id = id.split(",")
+    var list = id;
+    id = id.join("");
     id = id.split("");
     value = value.split(" ").join("");
+    value = value.replace(/[^a-zA-Z]/g, "");
     //checks that all the right characters are included, and that they are not repeated
     if (id.length === value.length && id.every((item) => value.includes(item))) {
-      event.target.className = "Right";
+      // my way of checking spelling of words in list
+      for (let i = 0; i < list.length; i++) {
+        if (value.includes(list[i])) {
+          right++;
+        }
+      }
+      if (right === list.length) {
+        event.target.className = "Right";
+      }
     } else {
       event.target.className = "Wrong";
     }
