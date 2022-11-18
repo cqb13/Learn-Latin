@@ -14,13 +14,14 @@ const useAnswers = () => {
     }
   };
 
-  return{
+  return {
     visibleAnswers,
     answerToggle: (
-    <button className="Chart-Option" onClick={() => toggleAnswers()}>
-      {answerBtnName}
-    </button>
-  )};
+      <button className="Chart-Option" onClick={() => toggleAnswers()}>
+        {answerBtnName}
+      </button>
+    ),
+  };
 };
 
 export default useAnswers;

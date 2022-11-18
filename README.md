@@ -31,7 +31,6 @@
 <pre>
 - Mobile css for large charts
 - Stop popups from going to center of screen when chart is switched
-- Firebase stuff...
 - Fill in missing data
 - Fix a lot of bad code
 </pre>
