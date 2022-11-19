@@ -27,10 +27,10 @@ const Chart = ({info, answers}) => {
       event.target.className = "Wrong";
     }
   }
-  
+
   const checkList = (value, id, event) => {
     var right = 0;
-    id = id.split(",")
+    id = id.split(",");
     var list = id;
     id = id.join("");
     id = id.split("");

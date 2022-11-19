@@ -8,6 +8,11 @@ const BUTTON_WRAPPER_STYLES = {
   position: 'relative',
 }
 
+//!!! this set position is what is causing the popup to reset 
+/**
+ * try getting top / left as states
+ * then setting them
+ */
 const MODAL_STYLES = {
   position: "fixed",
   top: "30%",

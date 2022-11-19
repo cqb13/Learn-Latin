@@ -15,7 +15,7 @@ const Translate = () => {
   const LTE = (word) => {
     setDisplayWord(word);
     setSearch("");
-    fetch("https://learn-latin-server.herokuapp.com/LTE" + linkChar +"?word=" + word)
+    fetch("https://learn-latin-server.onrender.com/LTE" + linkChar +"?word=" + word)
       .then((res) => res.text())
       .then((data) => {
         setData(data);
@@ -25,7 +25,7 @@ const Translate = () => {
   const ETL = (word) => {
     setDisplayWord(word);
     setSearch("");
-    fetch("https://learn-latin-server.herokuapp.com/ETL" + linkChar +"?word=" + word)
+    fetch("https://learn-latin-server.onrender.com/ETL" + linkChar +"?word=" + word)
       .then((res) => res.text())
       .then((data) => {
         setData(data);
