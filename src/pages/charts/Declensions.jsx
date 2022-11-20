@@ -1,16 +1,19 @@
 import { useState } from "react";
-import data from "../data/FutureTenseData.json";
-import Chart from "../components/Chart";
-import ChartTitle from "../components/ChartTitle";
-import { clearChartValues } from "../Funtions";
-import Popup from "../components/Popup";
-import useAnswers from "../components/toggleChartAnswerBtn";
+import { clearChartValues } from "../../Funtions";
+import data from "../../data/DeclensionData.json";
+import Chart from "../../components/Chart";
+import ChartTitle from "../../components/ChartTitle";
+import Popup from "../../components/Popup";
+import useAnswers from "../../components/toggleChartAnswerBtn";
 
-const FutureTense = () => {
+const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);
+  const [neuterChart, setNeuterChart] = useState("");
+  const [extraLabel, setExtraLabel] = useState("");
   const {answerToggle, visibleAnswers} = useAnswers();
   const chartAmount = data["chart-count"];
   var count = chartCount;
+  var btn;
 
   const swtichChart = (count, move) => {
     if (move === "right") {
@@ -24,28 +27,48 @@ const FutureTense = () => {
         setChartCount(chartAmount);
       }
     }
+    setNeuterChart("");
+    setExtraLabel("");
+  };
+
+  const toggleNeuterChart = () => {
+    if (neuterChart === "") {
+      setNeuterChart("-n");
+      setExtraLabel("Neuter");
+    } else {
+      setNeuterChart("");
+      setExtraLabel("");
+    }
+  };
+
+  const NeuterChartBTN = () => {
+    if (chartCount === 3 || chartCount === 4) {
+      btn = (
+        <button className="Chart-Option" onClick={() => toggleNeuterChart()}>Neuter Chart</button>
+      );
+    } else {
+      btn = "";
+    }
+    return <>{btn}</>;
   };
 
   return (
     <div>
       <div className="Row-Nav-Container">
-        <Popup popup={"present-tense"}/>
-        <Popup popup={"imperfect-tense"}/>
-        <Popup popup={"identify-verb-conjugations"}/>
+        <Popup popup={"declension-functions"}/>
       </div>
       <header className="Header">
-        <h1>Future Tense</h1>
+        <h1>Declensions Endings</h1>
       </header>
       <hr/>
-      <h2>Future Tense Chart {chartCount}/{chartAmount}</h2>
-      <h3>{data["action-" + chartCount]}</h3>
+      <h2>Declension Chart {chartCount}/{chartAmount} {extraLabel}</h2>
       <div className="Content">
         <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>
         <table className="Chart">
           <ChartTitle data={data["cat-names-1"]}/>
-          {data["f-" + chartCount]?.length > 0 ? (
+          {data["d-" + chartCount + neuterChart]?.length > 0 ? (
             <>
-            {data["f-" + chartCount].map((info) => (
+            {data["d-" + chartCount + neuterChart].map((info) => (
               <Chart info={info} answers={visibleAnswers}/>
             ))}
             </>
@@ -54,6 +77,7 @@ const FutureTense = () => {
         <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
       </div>
       <div className="Options">
+        <NeuterChartBTN />
         <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
         {answerToggle}
       </div>
@@ -61,4 +85,4 @@ const FutureTense = () => {
   );
 };
 
-export default FutureTense;
+export default Declensions;

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Chart from "../components/Chart";
-import ChartTitle from "../components/ChartTitle";
-import data from "../data/PersonalEndingsData.json";
-import { clearChartValues } from "../Funtions";
-import Popup from "../components/Popup";
-import useAnswers from "../components/toggleChartAnswerBtn";
+import Chart from "../../components/Chart";
+import ChartTitle from "../../components/ChartTitle";
+import data from "../../data/PersonalEndingsData.json";
+import { clearChartValues } from "../../Funtions";
+import Popup from "../../components/Popup";
+import useAnswers from "../../components/toggleChartAnswerBtn";
 
 const PersonalEndings = () => {
   const {answerToggle, visibleAnswers} = useAnswers();

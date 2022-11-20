@@ -1,9 +1,9 @@
-import data from "../data/DeclensionData.json";
-import Chart from "../components/Chart";
-import ChartTitle from "../components/ChartTitle";
-import { clearChartValues } from "../Funtions";
-import Popup from "../components/Popup";
-import useAnswers from "../components/toggleChartAnswerBtn";
+import data from "../../data/DeclensionData.json";
+import Chart from "../../components/Chart";
+import ChartTitle from "../../components/ChartTitle";
+import { clearChartValues } from "../../Funtions";
+import Popup from "../../components/Popup";
+import useAnswers from "../../components/toggleChartAnswerBtn";
 
 const DeclensionFunctions = () => {
   const {answerToggle, visibleAnswers} = useAnswers();

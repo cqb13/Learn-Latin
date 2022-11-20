@@ -1,23 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/Global.css";
 import "./css/Charts.css";
 import "./css/Translate.css";
-import Navbar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import Practice from "./pages/Practice";
 import Translate from "./pages/Translate";
 import Resources from "./pages/Resources";
-import Declensions from "./pages/Declensions";
-import FutureTense from "./pages/FutureTense";
-import PersonalEndings from "./pages/PersonalEndings";
-import PersonalPronouns from "./pages/PersonalPronouns";
-import DeclensionFunctions from "./pages/DeclensionFunctions";
+import Declensions from "./pages/charts/Declensions";
+import FutureTense from "./pages/charts/FutureTense";
+import PersonalEndings from "./pages/charts/PersonalEndings";
+import PersonalPronouns from "./pages/charts/PersonalPronouns";
+import DeclensionFunctions from "./pages/charts/DeclensionFunctions";
+import SentenceTranslation from "./pages/practice/SentenceTranslation";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <nav>
+        <Link to="/" className="Switch-Page">Home</Link>
+        <Link to="/practice" className="Switch-Page">Practice</Link>
+        <Link to="/translate" className="Switch-Page">Translate</Link>
+        <Link to="/resources" className="Switch-Page">Resources</Link>
+        <Link to="/" className="Icon">
+          <img src='../Logo.png' width="40px" height="40px" alt="Logo not found"></img>
+        </Link>
+      </nav>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/Practice" element={<Practice />} />
@@ -28,6 +37,7 @@ function App() {
         <Route path="/Practice/Personal-Endings" element={<PersonalEndings />} />
         <Route path="/Practice/Personal-Pronouns" element={<PersonalPronouns />} />
         <Route path="/Practice/Declension-Funtions" element={<DeclensionFunctions />} />
+        <Route path="/Practice/Sentence-Translation" element={<SentenceTranslation />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
