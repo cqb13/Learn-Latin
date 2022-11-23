@@ -1,10 +1,34 @@
 [
   {
-    "latin": "cur sum hic",
-    "english": "why am I here"
+    "latin": "Cur sum hic?",
+    "english": "Why am I here?",
+    "vocab": [
+      {
+        "word": "cur",
+        "meaning": "why"
+      },
+      {
+        "word": "sum",
+        "meaning": "to be"
+      },
+      {
+        "word": "hic",
+        "meaning": "here"
+      }
+    ]
   },
   {
-    "latin":"cur sum",
-    "english":"why am I"
+    "latin": "Cur sum?",
+    "english": "Why am I?",
+    "vocab": [
+      {
+        "word": "cur",
+        "meaning": "why"
+      },
+      {
+        "word": "sum",
+        "meaning": "to be"
+      }
+    ]
   }
 ]

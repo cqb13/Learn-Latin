@@ -61,7 +61,7 @@ const Popup = ({popup}) => {
         ) : (<></>)}
       </div>
       <hr/>
-      <button onClick={onClose}>Close</button>
+      <button onClick={onClose} className="Popup-Btn">Close</button>
       </div>
       </Draggable>
       </>,

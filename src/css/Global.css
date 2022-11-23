@@ -6,14 +6,14 @@ body {
   text-align: center;
 }
 
-main {
-  margin: auto auto auto auto;
-  width: 80%;
-}
-
 @viewport {
   width: device-width;
   zoom: 1;
+}
+
+main {
+  margin: auto auto auto auto;
+  width: 80%;
 }
 
 a {
@@ -41,6 +41,14 @@ nav {
   align-items: center;
   gap: 5px;
   width: 100%;
+}
+
+.Hidden {
+  display: none;
+}
+
+.Visible {
+  display: block;
 }
 
 .Icon {
@@ -94,6 +102,8 @@ button {
   background-color: #f5f7fa;
   color: #444;
   transition: 500ms;
+  padding: 5px;
+  font-size: 25px;
 }
 
 button:hover {
@@ -126,12 +136,12 @@ button:active {
   justify-content: center;
   align-items: center;
   width: 30%;
-  padding: 5px;
-  font-size: 25px;
   color: #444;
   border: 2px solid #496bbe;
   border-radius: 2px;
   transition: 500ms;
+  padding: 5px;
+  font-size: 25px;
 }
 
 .Sub-Selection:hover {
@@ -163,6 +173,16 @@ summary::-webkit-details-marker {
 
 details[open] {
   background-color: #f5f7fa !important;
+}
+
+.Popup-Bar-Btn {
+  font-size: 15px;
+  width: 15%;
+}
+
+.Popup-Btn {
+  font-size: 15px;
+  width: 30%;
 }
 
 .Popup-Container {

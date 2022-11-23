@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { clearChartValues, endings } from "../../Funtions";
 import data from "../../data/PersonalPronounsData.json";
-import Chart from "../../components/Chart";
-import ChartTitle from "../../components/ChartTitle";
+import Chart from "../../components/chart/Chart";
+import ChartTitle from "../../components/chart/ChartTitle";
 import Popup from "../../components/Popup";
-import useAnswers from "../../components/toggleChartAnswerBtn";
+import useAnswers from "../../components/chart/toggleChartAnswerBtn";
 
 const PersonalPronouns = () => {
   const [chartCount, setChartCount] = useState(1);

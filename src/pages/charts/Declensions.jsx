@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { clearChartValues } from "../../Funtions";
 import data from "../../data/DeclensionData.json";
-import Chart from "../../components/Chart";
-import ChartTitle from "../../components/ChartTitle";
+import Chart from "../../components/chart/Chart";
+import ChartTitle from "../../components/chart/ChartTitle";
 import Popup from "../../components/Popup";
-import useAnswers from "../../components/toggleChartAnswerBtn";
+import useAnswers from "../../components/chart/toggleChartAnswerBtn";
 
 const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);

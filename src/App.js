@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./css/Global.css";
 import "./css/Charts.css";
 import "./css/Translate.css";
+import "./css/TranslationPractice.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import Practice from "./pages/Practice";

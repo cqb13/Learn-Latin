@@ -19,7 +19,7 @@ const Practice = () => {
         <hr />
         <h2>Practice</h2>
         <div className="Flex-Item-Container">
-          <Link to="/practice/sentence-translation" className="Sub-Selection">Sentence Translation</Link>
+          <Link to="/practice" className="Sub-Selection">Sentence Translation</Link>
         </div>
       </main>
     </div>

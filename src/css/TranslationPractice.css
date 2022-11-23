@@ -1,0 +1,49 @@
+.Translation-Options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Translation-Option {
+  width: 30%;
+}
+
+.Input-Container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.Input-Container .Search {
+  width: 80%;
+}
+
+.Input-Container > * {
+  margin: 0 auto;
+}
+
+.Vocab-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Vocab-Container p {
+  font-size: 20px;
+}
+
+/*!!! Input field is weird size, fix then make width 100%*/
+@media screen and (max-width: 480px) {
+  .Translation-Options {
+    flex-direction: column;
+  }
+  .Input-Container .Search {
+    width: 90%;
+  }
+  .Translation-Option {
+    width: 100%;
+  }
+}
