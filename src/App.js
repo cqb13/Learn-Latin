@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./css/Chat.css"
 import "./css/Global.css";
 import "./css/Charts.css";
 import "./css/Translate.css";
-import "./css/TranslationPractice.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import "./css/TranslationPractice.css";
 import Home from "./pages";
+import Chat from "./pages/Chat";
 import Practice from "./pages/Practice";
 import Translate from "./pages/Translate";
 import Resources from "./pages/Resources";
@@ -23,6 +25,7 @@ function App() {
         <Link to="/" className="Switch-Page">Home</Link>
         <Link to="/practice" className="Switch-Page">Practice</Link>
         <Link to="/translate" className="Switch-Page">Translate</Link>
+        <Link to="/chat" className="Switch-Page">Chat</Link>
         <Link to="/resources" className="Switch-Page">Resources</Link>
         <Link to="/" className="Icon">
           <img src='../Logo.png' width="40px" height="40px" alt="Logo not found"></img>
@@ -32,6 +35,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/Practice" element={<Practice />} />
         <Route path="/Translate" element={<Translate />} />
+        <Route path="/Chat" element={<Chat />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Practice/Declensions" element={<Declensions />} />
         <Route path="/Practice/Future-Tense" element={<FutureTense />} />

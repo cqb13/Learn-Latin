@@ -1,0 +1,141 @@
+.Main-Area {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.Message-Container {
+  width: 70%;
+  height: 400px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--light-background);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.Info-Container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: var(--light-background);
+  border-radius: var(--border-radius);
+}
+
+.Account-Button {
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--light-background);
+}
+
+.sent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+  margin: 0.5rem 0;
+}
+
+.received {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  align-self: flex-start;
+  margin: 0.5rem 0;
+}
+
+.User-Info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  height: 20px;
+  border-radius: var(--border-radius);
+}
+
+form {
+  margin-top: 10px;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.Send-Button {
+  width: 30%;
+  background-color: var(--light-background);
+}
+
+form input[type="text"] {
+  font-size: 25px;
+}
+
+form input:focus {
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.sent .User-Info {
+  background-color: var(--light-background);
+}
+
+.received .User-Info {
+  background-color: #aaaaaa1a;
+  flex-direction: row-reverse;
+}
+
+.User-Info img {
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.sent p,
+.received p {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  color: var(--main-text-color);
+  border-radius: var(--border-radius);
+}
+
+.sent p {
+  background-color: var(--light-background);
+  margin-right: 0.5rem;
+}
+
+.received p {
+  background-color: #aaaaaa1a;
+  margin-left: 0.5rem;
+}
+
+.User-Info p {
+  background: none;
+}
+
+.User-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0;
+  width: 100%;
+  height: 300px;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.User-Container .User-Info {
+  flex-direction: row-reverse;
+  justify-content: left;
+  width: 80%;
+  background-color: var(--light-background);
+}
+
+.User-Container .User-Info img {
+  margin-right: 0.5rem;
+}

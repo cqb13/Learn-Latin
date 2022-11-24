@@ -2,11 +2,15 @@
   margin-bottom: 0px;
 }
 
-.Search {
-  width: 70%;
+.Search-Area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Search-Area input[type="text"] {
   font-size: 25px;
-  outline-color: #496bbe;
-  padding: 5px;
 }
 
 .Mode-Btn {
@@ -14,14 +18,14 @@
   margin: 10px;
   padding: 5px;
   font-size: 25px;
-  border: none;
-  outline: 2px solid #496bbe;
+  border: var(--border);;
 }
 
 .Search-Options {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .Search-Term {
@@ -38,15 +42,19 @@
 
 .Results {
   width: 80%;
+  height: 400px;
   text-align: left;
-  margin: auto auto auto auto;
+  margin: 0 auto;
   font-size: 20px;
+  overflow-y: auto;
+  background-color: var(--light-background);
+  border-radius: var(--border-radius);
 }
 
 .Translation-Display {
   width: fit-content;
   font-family: inherit;
-  margin: auto auto auto auto;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 1060px) {
@@ -78,7 +86,7 @@
     margin-bottom: 10px;
   }
   .Mode-Btn {
-    margin: auto auto auto auto;
+    margin: 0 auto;
     width: 100%;
   }
   .Option {

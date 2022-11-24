@@ -6,7 +6,6 @@
   width: 100%;
 }
 
-/*TODO: try making outer chart border rounded*/
 .Chart {
   width: 50%;
 }
@@ -17,44 +16,37 @@
   padding: 8px;
 }
 
-.Chart tr:nth-child(even) {
-  background-color: #f2f2f2;
+.Chart tr {
+  background-color: #aaaaaa1a;
+  transition: 500ms;
 }
 
 .Chart tr:hover {
-  background-color: #ddd;
+  background-color: var(--light-background);
 }
 
 .Chart th {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #496bbe;
+  background-color: var(--accent-background-color);
   color: white;
 }
 
-input[type="text"] {
-  outline-style: solid;
-  outline-width: 2px;
+.Chart input[type="text"] {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-input[type="text"]:focus {
-  outline-color: #496bbe;
+.Chart .Wrong {
+  border-color: #ff00008a;
 }
 
-/*TODO: maybe dont use !important*/
-.Wrong {
-  outline-color: red;
-  border-radius: 0px !important;
+.Chart .Right {
+  border-color: #00ff7f8a;
 }
 
-.Right {
-  outline-color: springgreen;
-  border-radius: 0px !important;
-}
-
-.Normal {
-  outline-color: #444;
-  border-radius: 0px !important;
+.Chart .Normal {
+  border: var(--border);
 }
 
 .Switch-Chart {
@@ -110,7 +102,7 @@ input[type="text"]:focus {
     flex-direction: column;
   }
   .Chart {
-    margin: auto auto auto auto;
+    margin: 0 auto;
     width: 90%;
   }
   input[type="text"] {

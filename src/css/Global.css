@@ -1,7 +1,17 @@
+:root {
+  --main-color: #496bbe;
+  --main-background-color: #f5f7fa;
+  --main-text-color: #444;
+  --accent-background-color: #496bbe;
+  --light-background: #496bbe1a;
+  --border: 3px solid #496bbe1a;
+  --border-radius: 3px;
+}
+
 body {
   margin: 0;
-  color: #444;
-  background: #f5f7fa;
+  color: var(--main-text-color);
+  background: var(--main-background-color);
   font-family: "Ubuntu", sans-serif;
   text-align: center;
 }
@@ -12,7 +22,7 @@ body {
 }
 
 main {
-  margin: auto auto auto auto;
+  margin: 0 auto;
   width: 80%;
 }
 
@@ -31,7 +41,7 @@ nav {
   display: flex;
   padding: 5px 0px 5px 0px;
   width: 100%;
-  background-color: #496bbe;
+  background-color: var(--accent-background-color);
 }
 
 .Row-Nav-Container {
@@ -65,7 +75,7 @@ nav {
   text-decoration: none;
   color: #f5f7fa;
   border: 2px solid #f5f7fa;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   transition: 500ms;
 }
 
@@ -74,7 +84,7 @@ nav {
 }
 
 .Switch-Page:active {
-  color: #444;
+  color: var(--main-text-color);
   border: 2px solid #444;
 }
 
@@ -90,17 +100,25 @@ h2 {
 input[type="text"] {
   font-family: inherit;
   text-align: center;
-  background-color: inherit;
-  border-radius: 2px;
-  border: none;
-  color: #444;
+  all: unset;
+  width: 70%;
+  background-color: var(--light-background);
+  transition: 400ms;
+  padding: 5px;
+  border-radius: var(--border-radius);
+  border: 3px solid rgb(73, 107, 190, 0);
+}
+
+input[type="text"]:focus {
+  border: var(--border);
 }
 
 button {
-  border: 2px solid #496bbe;
-  border-radius: 2px;
-  background-color: #f5f7fa;
-  color: #444;
+  border: 2px solid #44444400;
+  border-radius: var(--border-radius);
+  background-color: var(--light-background);
+  border: var(--border);
+  color: var(--main-text-color);
   transition: 500ms;
   padding: 5px;
   font-size: 25px;
@@ -137,8 +155,9 @@ button:active {
   align-items: center;
   width: 30%;
   color: #444;
-  border: 2px solid #496bbe;
-  border-radius: 2px;
+  background-color: var(--light-background);
+  border: var(--border);
+  border-radius: var(--border-radius);
   transition: 500ms;
   padding: 5px;
   font-size: 25px;
@@ -146,33 +165,6 @@ button:active {
 
 .Sub-Selection:hover {
   background-color: #496bbeb3;
-}
-
-.Dropdown {
-  min-width: 20%;
-  width: fit-content;
-  max-width: 40%;
-  padding: 3px;
-  margin: 5px auto 5px auto;
-  border: 2px solid #496bbe;
-  transition: 500ms;
-}
-
-summary {
-  font-size: 23px;
-  list-style: none;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-.Dropdown:hover {
-  background-color: #496bbeb3;
-}
-
-details[open] {
-  background-color: #f5f7fa !important;
 }
 
 .Popup-Bar-Btn {
@@ -187,9 +179,9 @@ details[open] {
 
 .Popup-Container {
   width: fit-content;
+  border-radius: var(--border-radius);
   max-width: 25%;
-  border: 2px solid #496bbe;
-  border-radius: 2px;
+  border: var(--border);
   background-color: rgb(245, 247, 250, 0.9);
   padding: 20px;
   z-index: 1000;
@@ -201,7 +193,7 @@ details[open] {
 
 .Popup-Content {
   width: 100%;
-  margin: auto auto auto auto;
+  margin: 0 auto;
   word-wrap: break-word;
 }
 
