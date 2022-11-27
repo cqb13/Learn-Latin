@@ -26,12 +26,11 @@
 - Verb conjugation endings 1-5
 - Word translation (whitakers words & google)
 - Resources for learning Latin
+- Chat
 </pre>
 <h2>TODO:</h2>
 <pre>
 - Sentance translation practice
-- Chat bc why not
-- Mobile css for large charts
 - Fill in missing data
 - Fix a lot of bad code
 </pre>

@@ -27,9 +27,6 @@ function App() {
         <Link to="/translate" className="Switch-Page">Translate</Link>
         <Link to="/chat" className="Switch-Page">Chat</Link>
         <Link to="/resources" className="Switch-Page">Resources</Link>
-        <Link to="/" className="Icon">
-          <img src='../Logo.png' width="40px" height="40px" alt="Logo not found"></img>
-        </Link>
       </nav>
       <Routes>
         <Route exact path="/" element={<Home />} />
