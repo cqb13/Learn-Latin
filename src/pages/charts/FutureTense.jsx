@@ -2,9 +2,10 @@ import { useState } from "react";
 import data from "../../data/FutureTenseData.json";
 import Chart from "../../components/chart/Chart";
 import ChartTitle from "../../components/chart/ChartTitle";
-import { clearChartValues } from "../../Funtions";
+import clearChartValues from "../../utils/clearChartValues";
 import Popup from "../../components/Popup";
 import useAnswers from "../../components/chart/toggleChartAnswerBtn";
+import "../../css/pages/Charts.css";
 
 const FutureTense = () => {
   const [chartCount, setChartCount] = useState(1);

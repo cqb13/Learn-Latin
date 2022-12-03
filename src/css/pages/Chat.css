@@ -139,3 +139,41 @@ form input:focus {
 .User-Info p {
   background: none;
 }
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 90%;
+  }
+  .Main-Area {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .Message-Container {
+    width: 90%;
+    height: 300px;
+    flex-direction: column;
+    border: 2px solid black;
+  }
+  .Info-Container {
+    width: 100%;
+    height: 100px;
+  }
+  .User-Container {
+    height: 50px;
+  }
+  .User-Container .User-Info img {
+    margin-right: 0;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Send-Button {
+    width: 100%;
+  }
+  form input[type="text"] {
+    font-size: 20px;
+  }
+}

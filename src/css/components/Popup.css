@@ -1,0 +1,31 @@
+.Popup-Btn {
+  font-size: 15px;
+  width: 30%;
+}
+
+.Popup-Container {
+  width: fit-content;
+  border-radius: var(--border-radius);
+  max-width: 25%;
+  border: var(--border);
+  background-color: rgb(245, 247, 250, 0.9);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.Popup-Title {
+  margin-top: 0px;
+}
+
+.Popup-Content {
+  width: 100%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 550px) {
+  .Popup-Container {
+    width: 100%;
+    max-width: 100%;
+  }
+}

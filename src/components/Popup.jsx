@@ -3,12 +3,13 @@ import React from "react";
 import ReactDom from "react-dom";
 import Draggable from "react-draggable";
 import data from "../data/PopupData.json";
+import "../css/components/Popup.css";
 
 const BUTTON_WRAPPER_STYLES = {
   position: 'relative',
 }
 
-//!!! this set position is what is causing the popup to reset 
+//!!! test
 /**
  * try getting top / left as states
  * then setting them

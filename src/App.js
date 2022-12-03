@@ -1,18 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./css/Chat.css"
 import "./css/Global.css";
-import "./css/Charts.css";
-import "./css/Translate.css";
-//import "./css/TranslationPractice.css";
 import Home from "./pages";
 import Chat from "./pages/Chat";
 import Practice from "./pages/Practice";
 import Translate from "./pages/Translate";
 import Resources from "./pages/Resources";
 import Declensions from "./pages/charts/Declensions";
-import FutureTense from "./pages/charts/FutureTense";
+import FutureTense from "./pages/charts/FutureTense"
 import PersonalEndings from "./pages/charts/PersonalEndings";
 import PersonalPronouns from "./pages/charts/PersonalPronouns";
 import DeclensionFunctions from "./pages/charts/DeclensionFunctions";

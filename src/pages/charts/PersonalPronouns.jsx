@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { clearChartValues, endings } from "../../Funtions";
+import clearChartValues from "../../utils/clearChartValues";
 import data from "../../data/PersonalPronounsData.json";
 import Chart from "../../components/chart/Chart";
 import ChartTitle from "../../components/chart/ChartTitle";
 import Popup from "../../components/Popup";
 import useAnswers from "../../components/chart/toggleChartAnswerBtn";
+import "../../css/pages/Charts.css";
 
 const PersonalPronouns = () => {
   const [chartCount, setChartCount] = useState(1);
@@ -15,6 +16,7 @@ const PersonalPronouns = () => {
   const [extraLabel, setExtraLabel] = useState("");
   const [otherExtraLabel, setOtherExtraLabel] = useState("");
   const chartAmount = data["chart-count"];
+  const endings = ["", "1st", "2nd", "3rd"];
   var count = chartCount;
   var btn;
 

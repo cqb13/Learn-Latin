@@ -10,26 +10,9 @@
 
 <hr />
 
-<h2>Features:</h2>
-<pre>
-- Declension charts 1-5
-- Declension charts 1-5 answers
-- Declension functions chart
-- Declension functions
-- Future tense charts 1-2
-- Personal endings chart
-- Personal endings chart Meanings
-- Personal Pronouns chart
-- Personal Pronouns chart meanings
-- Present tense 
-- Imperfect Tense
-- Verb conjugation endings 1-5
-- Word translation (whitakers words & google)
-- Resources for learning Latin
-- Chat
-</pre>
 <h2>TODO:</h2>
 <pre>
+- Redesign chart control buttons
 - Sentance translation practice
 - Fill in missing data
 - Fix a lot of bad code

@@ -46,7 +46,7 @@
 }
 
 .Chart .Normal {
-  border: var(--border);
+  border-color: none;
 }
 
 .Switch-Chart {

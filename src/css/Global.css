@@ -46,7 +46,6 @@ nav {
 
 .Row-Nav-Container {
   display: flex;
-  padding: 5px 0px 5px 0px;
   justify-content: center;
   align-items: center;
   gap: 5px;
@@ -169,32 +168,8 @@ button:active {
 
 .Popup-Bar-Btn {
   font-size: 15px;
-  width: 15%;
-}
-
-.Popup-Btn {
-  font-size: 15px;
+  margin-top: 5px;
   width: 30%;
-}
-
-.Popup-Container {
-  width: fit-content;
-  border-radius: var(--border-radius);
-  max-width: 25%;
-  border: var(--border);
-  background-color: rgb(245, 247, 250, 0.9);
-  padding: 20px;
-  z-index: 1000;
-}
-
-.Popup-Title {
-  margin-top: 0px;
-}
-
-.Popup-Content {
-  width: 100%;
-  margin: 0 auto;
-  word-wrap: break-word;
 }
 
 @media only screen and (max-width: 300px) {
@@ -209,24 +184,19 @@ button:active {
     margin: 2px;
     font-size: 4vw;
   }
+
   chartnav {
     flex-direction: column;
   }
+
   .Sub-Selection {
     font-size: 20px;
     width: 100%;
   }
-  .Dropdown {
-    width: 80%;
-  }
+
   h3 {
     font-size: 15px;
     margin-bottom: 0px;
-  }
-  .Popup-Container {
-    width: 80%;
-    max-width: 80%;
-    z-index: 1000;
   }
 }
 

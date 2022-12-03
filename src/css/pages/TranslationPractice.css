@@ -40,9 +40,11 @@
   .Translation-Options {
     flex-direction: column;
   }
+
   .Input-Container .Search {
     width: 90%;
   }
+
   .Translation-Option {
     width: 100%;
   }

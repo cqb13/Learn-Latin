@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import data from "../../data/TranslationPractice.json";
 import VocabDisplay from "../../components/practice/VocabDisplay";
+import "../../css/pages/TranslationPractice.css";
 
 const SentenceTranslation = () => {
   const [visibility, setVisibility] = useState("Hidden");

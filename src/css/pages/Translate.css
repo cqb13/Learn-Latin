@@ -18,7 +18,7 @@
   margin: 10px;
   padding: 5px;
   font-size: 25px;
-  border: var(--border);;
+  border: var(--border);
 }
 
 .Search-Options {
@@ -47,8 +47,6 @@
   margin: 0 auto;
   font-size: 20px;
   overflow-y: auto;
-  background-color: var(--light-background);
-  border-radius: var(--border-radius);
 }
 
 .Translation-Display {
@@ -58,9 +56,6 @@
 }
 
 @media only screen and (max-width: 1060px) {
-  .Search-Area {
-    flex-direction: column;
-  }
   .Mode-Btn {
     width: 30%;
   }
@@ -78,9 +73,13 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 760px) {
   .Search-Options {
     flex-direction: column;
+  }
+  .Search-Area {
+    flex-direction: column;
+    gap: 10px;
   }
   .Search {
     margin-bottom: 10px;

@@ -4,6 +4,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import { collection, orderBy, limit, query, addDoc, getDoc, setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import "../css/pages/Chat.css";
 
 const Chat = () => {
   const [user] = useAuthState(auth);
@@ -16,7 +17,7 @@ const Chat = () => {
   const [userList] = useCollectionData(users, { idField: "id" });
 
   const [formValue, setFormValue] = useState("");
-
+  
   const scrollTo = useRef(null);
 
   useEffect(() => {
@@ -64,6 +65,7 @@ const Chat = () => {
     signOut(auth);
   };
 
+  //!!! if image cant be loaded every time user updates page, it will read db
   const UserList = () => {
     const UserListItem = ({image, name}) => {
       console.log(image, name);

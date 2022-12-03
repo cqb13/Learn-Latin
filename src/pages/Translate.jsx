@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../css/pages/Translate.css";
 
 const Translate = () => {
   const [data, setData] = useState("");

@@ -1,16 +1,17 @@
 import { useState } from "react";
-import { clearChartValues } from "../../Funtions";
+import clearChartValues from "../../utils/clearChartValues";
 import data from "../../data/DeclensionData.json";
 import Chart from "../../components/chart/Chart";
 import ChartTitle from "../../components/chart/ChartTitle";
 import Popup from "../../components/Popup";
 import useAnswers from "../../components/chart/toggleChartAnswerBtn";
+import "../../css/pages/Charts.css";
 
 const Declensions = () => {
   const [chartCount, setChartCount] = useState(1);
   const [neuterChart, setNeuterChart] = useState("");
   const [extraLabel, setExtraLabel] = useState("");
-  const {answerToggle, visibleAnswers} = useAnswers();
+  const { answerToggle, visibleAnswers } = useAnswers();
   const chartAmount = data["chart-count"];
   var count = chartCount;
   var btn;
@@ -44,7 +45,9 @@ const Declensions = () => {
   const NeuterChartBTN = () => {
     if (chartCount === 3 || chartCount === 4) {
       btn = (
-        <button className="Chart-Option" onClick={() => toggleNeuterChart()}>Neuter Chart</button>
+        <button className="Chart-Option" onClick={() => toggleNeuterChart()}>
+          Neuter Chart
+        </button>
       );
     } else {
       btn = "";
@@ -55,30 +58,46 @@ const Declensions = () => {
   return (
     <div>
       <div className="Row-Nav-Container">
-        <Popup popup={"declension-functions"}/>
+        <Popup popup={"declension-functions"} />
       </div>
       <header className="Header">
         <h1>Declensions Endings</h1>
       </header>
-      <hr/>
-      <h2>Declension Chart {chartCount}/{chartAmount} {extraLabel}</h2>
+      <hr />
+      <h2>
+        Declension Chart {chartCount}/{chartAmount} {extraLabel}
+      </h2>
       <div className="Content">
-        <button className="Switch-Chart" onClick={() => swtichChart(count, "left")}>{"<"}</button>
+        <button
+          className="Switch-Chart"
+          onClick={() => swtichChart(count, "left")}
+        >
+          {"<"}
+        </button>
         <table className="Chart">
-          <ChartTitle data={data["cat-names-1"]}/>
+          <ChartTitle data={data["cat-names-1"]} />
           {data["d-" + chartCount + neuterChart]?.length > 0 ? (
             <>
-            {data["d-" + chartCount + neuterChart].map((info) => (
-              <Chart info={info} answers={visibleAnswers}/>
-            ))}
+              {data["d-" + chartCount + neuterChart].map((info) => (
+                <Chart info={info} answers={visibleAnswers} />
+              ))}
             </>
-          ) : (<></>)}
+          ) : (
+            <></>
+          )}
         </table>
-        <button className="Switch-Chart" onClick={() => swtichChart(count, "right")}>{">"}</button>
+        <button
+          className="Switch-Chart"
+          onClick={() => swtichChart(count, "right")}
+        >
+          {">"}
+        </button>
       </div>
       <div className="Options">
         <NeuterChartBTN />
-        <button className="Chart-Option" onClick={() => clearChartValues()}>Clear Answers</button>
+        <button className="Chart-Option" onClick={() => clearChartValues()}>
+          Clear Answers
+        </button>
         {answerToggle}
       </div>
     </div>
